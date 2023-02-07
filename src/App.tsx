@@ -10,7 +10,6 @@ function App() {
   return (
     <>
     <BookrProvider>
-     Your Nav here ...
       <BrowserRouter>
         <Routes>
           <Route path='' element={<DemoPage />} />
@@ -18,7 +17,6 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      Your Footer here... 
     </BookrProvider>
     </>
 
