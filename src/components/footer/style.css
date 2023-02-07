@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Poppins:ital,wght@1,100&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+.footerCategoryList{
+    display: flex;
+    margin-top: 1em;
+
+    list-style: none;
+}
+
+@media (max-width: 768px){
+    .footerCategoryList{
+        /* display: none; */
+        padding: 0;
+        height: auto !important;
+    }
+
+    .gridContainer_mo {
+        display: flex !important;
+        width: 21em !important;
+        /* padding: 1em; */
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        border-bottom: 1px solid #D0D5DD !important;
+        margin-bottom: 0.8em !important;
+    }
+    .gridContainer_mo1 {
+        display: flex !important;
+        width: 100% !important;
+        padding: 0.8em !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .searchInput_mo{
+        width: 21em !important;
+        height: 2.5em !important;
+        padding: 0 !important;
+        margin-left: 0% !important;
+    }
+    .footer_mo{
+        width: 100% !important;
+        padding: 0 !important;
+        height: 24em !important;
+    }
+    .hiddenGrid_mo {
+        display: block !important;
+    }
+    .moblie_li_itme{
+        width: 100% !important;
+        background-color: #10375C !important;
+        /* z-index: 3 !important; */
+    }
+}
