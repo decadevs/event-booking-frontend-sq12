@@ -71,7 +71,7 @@ const stlyedEvents = makeStyles((theme)=>({
         fontFamily: "Manrope",
         fontStyle: "normal",
         fontWeight: 700,
-        fontSize: "40px",
+        fontSize: "2.25em",
         lineHeight: "55px",
         color: "#252D42",
         textAlign: "start",
@@ -138,6 +138,16 @@ const stlyedEvents = makeStyles((theme)=>({
         fontSize: "16px",
         lineHeight: "22px",
         color: "#000000",
+    },
+
+    '@media (max-width: 768px)': {
+        cardContainer:{
+        gridTemplateColumns: "1fr"
+        },
+        upcoming:{
+            margin: 0,
+            fontSize: "1em"
+        }
     }
 })) 
 
@@ -147,7 +157,7 @@ const EventCard:React.FC = ()=>{
     return (
     <>
     <div className={classes.mainContainer}>
-        <h1 className={classes.upcoming}>Upcoming events</h1>
+        <div><h1 className={classes.upcoming}>Upcoming events</h1></div>
         <div className={classes.allContainer}>
         <div className={classes.cardContainer}>
             <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
@@ -177,7 +187,7 @@ const EventCard:React.FC = ()=>{
                     </div>
                 </Card>
             </Link>
-            {/* <div className={classes.cards}>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -201,8 +211,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -226,8 +236,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -251,8 +261,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -276,8 +286,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -301,8 +311,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -326,8 +336,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -351,8 +361,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -376,8 +386,8 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <div className={classes.cards}>
+            </div>
+            <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -401,7 +411,7 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
         <div className={classes.buttonDiv}>
         <button className={classes.btn}>Load More Events</button>
