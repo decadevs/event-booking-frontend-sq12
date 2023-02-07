@@ -11,6 +11,11 @@
 
     list-style: none;
 }
+.ul_categoryList{
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
 
 @media (max-width: 768px){
     .footerCategoryList{
@@ -21,7 +26,7 @@
 
     .gridContainer_mo {
         display: flex !important;
-        width: 21em !important;
+        width: 100% !important;
         /* padding: 1em; */
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -36,7 +41,7 @@
         align-items: flex-start !important;
     }
     .searchInput_mo{
-        width: 21em !important;
+        width: 100% !important;
         height: 2.5em !important;
         padding: 0 !important;
         margin-left: 0% !important;

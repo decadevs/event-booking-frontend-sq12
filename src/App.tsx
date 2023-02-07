@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { DemoPage } from './pages/demo'
 import { DashboardPage } from './pages/dashboard/DashboardPage';
 import { BookrProvider } from './utils/context';
-import Footer from './components/footer/footer';
+import Footer from './components/footer';
 
 
 function App() {
@@ -16,11 +16,11 @@ function App() {
         <Routes>
           <Route path='' element={<DemoPage />} />
           <Route path='/dashboard' element={<DashboardPage />} />
-          <Route path="/footer" element={<Footer />} />
         </Routes>
       </BrowserRouter>
 
-      Your Footer here... 
+      
+     <Footer />
     </BookrProvider>
     </>
 

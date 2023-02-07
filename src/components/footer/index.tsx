@@ -18,10 +18,12 @@ import SearchIcon from '../../assets/searchIcon.png';
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: '#10375C',
-    padding: theme.spacing(6),
+    padding: '1em',
+    position: 'absolute',
+    bottom: 0,
     display: 'flex',
     height: '26em',
-    width: '100vw',
+    width: '100%',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -31,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     background: '#FFFFFF',
     opacity: '0.2',
     borderRadius: '0.5em',
-    width: '16em',
+    width: '100%',
+    marginLeft: '0',
     height: '2.5em',
     display: 'flex',
     flexDirection: 'row',
@@ -39,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: 'flex',
     justifyContent: 'center',
-    height: '100%',
+    height: '20em',
+    width: '100%',
     backgroundColor: '#10375C',
     alignItems: 'center',
     '& Grid': {
@@ -50,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     height: 'auto',
-    padding: theme.spacing(3),
+    padding: '0',
   },
   icon: {
     fontSize: 20,
@@ -75,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     lineHeight: '1.5em',
     '&:hover ul': {
-      display: 'block'
+      display: 'block',
     }
   },
   categoryList: {
@@ -98,7 +102,8 @@ const useStyles = makeStyles((theme) => ({
   '@media (min-width: 600px)': {
     categoryList: {
       display: 'block',
-      position: 'static'
+      position: 'static',
+      paddingLeft: 0,
     },
   }
 }));
@@ -110,14 +115,15 @@ const Footer:React.FC = () => {
     <footer className={`${classes.footer} footer_mo`}>
       <Container className={`${classes.gridContainer1}  gridContainer_mo1`} >
         <Grid className={`${classes.gridContainer} gridContainer_mo`} spacing={2}>
-          <Grid item xs={12} sm={4} style={{ height: '10em'}}>
+          <Grid item xs={12} sm={3} style={{ height: '10em'}}>
             <Typography variant="h6" gutterBottom className={classes.category}>
               Events
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={4} style={{ height: '10em'}}>
+          <Grid item xs={12} sm={3} style={{ height: '10em'}}>
             <Typography variant="h6" gutterBottom className={classes.category}>
-              <ul className={`${classes.categoryList}`}>
+                Social media
+              <ul className={`${classes.categoryList} ul_categoryList`}>
                 <li>
                   <Link className={classes.link} href="#">
                     <FacebookIcon className={classes.icon} />
@@ -141,10 +147,10 @@ const Footer:React.FC = () => {
               </ul>
             </Typography>
           </Grid>
-          <Grid className='moblie_li_itme' item xs={12} sm={4} style={{ height: '10em'}}>
+          <Grid className='moblie_li_itme' item xs={12} sm={3} style={{ height: '10em'}}>
           <Typography variant="h6" gutterBottom className={classes.category}>
               Company
-              <ul className={classes.categoryList}>
+              <ul className={`${classes.categoryList} ul_categoryList`}>
                 <li>
                   <Link className={classes.link} href="#">
                     About Us
@@ -168,10 +174,10 @@ const Footer:React.FC = () => {
               </ul>
             </Typography>
           </Grid>
-          <Grid className='moblie_li_itme' item xs={12} sm={4} style={{ height: '10em'}}>
+          <Grid className='moblie_li_itme' item xs={12} sm={3} style={{ height: '10em'}}>
             <Typography variant="h6" gutterBottom className={classes.category}>
               Support
-              <ul className={classes.categoryList}>
+              <ul className={`${classes.categoryList} ul_categoryList`}>
                 <li>
                   <Link className={classes.link} href="#">
                     Help Center
@@ -195,7 +201,7 @@ const Footer:React.FC = () => {
               </ul>
             </Typography>
           </Grid>
-          <Grid className='moblie_li_itme' item xs={12} sm={4} style={{ height: '10em'}}>
+          <Grid className='moblie_li_itme' item xs={12} sm={3} style={{ height: '10em'}}>
             <Typography variant="h6" gutterBottom className={classes.category}>
               Stay up to date
               <TextField
@@ -226,7 +232,7 @@ const Footer:React.FC = () => {
           </Link>
         </Typography>
         <Typography style={{color:"white"}} component={'p'}>
-            hello
+            {/* hello */}
         </Typography>
         {/* <Typography variant="subtitle1" align="center"  style={{ color: "#FFF !important"}} component="p">
           {'Copyright © '
