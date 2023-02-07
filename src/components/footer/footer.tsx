@@ -225,6 +225,9 @@ const Footer:React.FC = () => {
             All rights reserved.
           </Link>
         </Typography>
+        <Typography style={{color:"white"}} component={'p'}>
+            hello
+        </Typography>
         {/* <Typography variant="subtitle1" align="center"  style={{ color: "#FFF !important"}} component="p">
           {'Copyright © '
           + new Date().getFullYear() + ' '}
