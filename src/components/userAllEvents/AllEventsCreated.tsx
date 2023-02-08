@@ -1,5 +1,3 @@
-import React from 'react'
-import { Mobile } from '../../responsive';
 import styled from 'styled-components'
 import {FilterAltOutlined, OpenInNewOutlined} from '@mui/icons-material';
 import { Button } from '@mui/material';
@@ -87,7 +85,6 @@ text-align:left;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-// font-size: 16px;
 color: #667085;
 margin:0;
 padding: 0;
@@ -97,7 +94,6 @@ text-align:left;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
-// font-size: 16px;
 color: #252D42;
 margin:0;
 padding: 0;

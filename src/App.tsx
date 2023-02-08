@@ -6,6 +6,7 @@ import { ContextProvider } from './utils/context';
 import { Bookerpallette} from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AllEventsCreatedHeader from './components/userAllEvents/AllEventsCreated';
+import TicketsSummary from './components/userAllEvents/TicketsSummary';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='' element={<DemoPage />} />
           <Route path='/dashboard' element={<DashboardPage />} />
           <Route path='/allevents' element={<AllEventsCreatedHeader />} />
+          <Route path='/ticketsummarymodal' element={<TicketsSummary />} />
         </Routes>
       </BrowserRouter>
       {/* Your Footer here...  */}
