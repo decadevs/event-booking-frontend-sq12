@@ -2,19 +2,16 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { DemoPage } from './pages/demo'
 import { DashboardPage } from './pages/dashboard/DashboardPage';
+import { Bookerpallette } from './utils/theme';
 import { ContextProvider } from './utils/context';
-import { Bookerpallette} from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
+import Footer from './components/footer';
 
 const theme = createTheme({
   palette: {
   ... Bookerpallette
   },
 })
-
-
 function App() {
   return (
     <>
@@ -27,7 +24,7 @@ function App() {
           <Route path='/dashboard' element={<DashboardPage />} />
         </Routes>
       </BrowserRouter>
-      Your Footer here... 
+     <Footer />
      </ThemeProvider>
     </ContextProvider>
     </>
