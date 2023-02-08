@@ -387,7 +387,7 @@ const EventCard:React.FC = ()=>{
                     </div>
                 </div>
             </div>
-            <div className={classes.cards}>
+            {/* <div className={classes.cards}>
                 <img src={events} alt="event banner" />
                 <div className={classes.contents}>
                     <div>
@@ -411,7 +411,7 @@ const EventCard:React.FC = ()=>{
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
         <div className={classes.buttonDiv}>
         <button className={classes.btn}>Load More Events</button>
