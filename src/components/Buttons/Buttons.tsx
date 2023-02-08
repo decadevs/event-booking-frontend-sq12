@@ -14,7 +14,7 @@ const Buttons: React.FC<Props> = ({
     const styl = {
         color: 'white',
         backgroundColor: '#ff5722',
-        borderRadius: '5%',
+        borderRadius: '10px',
         border: '1px solid',
         display: 'flex',
         justifyContent: 'center',
