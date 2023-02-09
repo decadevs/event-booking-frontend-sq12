@@ -24,6 +24,10 @@ const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 45vh;
+    }
 `;
 
 const StyledFormControl = styled(FormControl)`
