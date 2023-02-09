@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const Main = styled.div`
     background-color: var(--secondary);
     padding: 10px;
-    width:100vw
+   
+    width:100%;
 
 `
 

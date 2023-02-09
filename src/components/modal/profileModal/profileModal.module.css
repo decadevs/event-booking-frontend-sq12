@@ -1,0 +1,113 @@
+.modalStyle{
+    position:relative;
+    background:#ffff;
+}
+
+.modalContainer{
+    position: absolute;
+    margin-top: 30px;
+    left: -40px;
+    
+  
+    
+    padding: 1rem;
+    z-index: 99;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.topAvatar{
+         width: 3.5rem;
+         height: 3.5rem;
+         border-radius: 50%;
+         cursor: pointer;
+}
+
+.profileHeader{
+    display:flex; 
+    
+  width: 100%;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1.2rem 1rem 0;
+  
+    
+}
+.logout:hover{
+    cursor: pointer;
+    color: #98A2B3;
+}
+.profileDetails{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+  padding: 1rem 0.2rem 6rem 1rem;
+}
+
+.headerText{
+    display:flex;
+    flex-direction: column;
+    color:red;
+    margin-left: 10px
+}
+.textName{
+    margin-right:80px;
+    color:#101828;
+    font-weight: bold;
+}
+.textEmail{
+    color:#98A2B3
+}
+.borderLine{
+    width: 100%;
+  
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.payment{
+    display:flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;  
+}
+.closeProfileModal{
+    position:absolute;
+    right:2rem;
+}
+.closeProfileModal{
+    cursor:pointer;
+}
+
+@media screen and (max-width:600px){
+    .modalStyle{
+        position:absolute;
+        align-items: center;
+        right:18.35rem
+    }
+}
+@media screen and (max-width:896px){
+    .modalStyle{
+        position:absolute;
+        align-items: center;
+        right:22.35rem
+    }
+}
+@media screen and (max-width:740px){
+    .modalStyle{
+        position:absolute;
+        align-items: center;
+        right:22.7rem
+    }
+}
+@media screen and (max-width:1180){
+    .modalStyle{
+        position:absolute;
+        align-items: center;
+        right:22.7rem
+    }
+}

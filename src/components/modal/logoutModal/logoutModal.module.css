@@ -1,0 +1,35 @@
+.logoutContainer{
+    right:20px;
+    width:21rem;
+    height:10rem;
+    
+}
+.borderLine{
+    width:100%;
+}
+.logoutText{
+    position:absolute;
+    left:20px;
+}
+.logbtn {
+    position:absolute;
+    right:10px;
+    justify-content: space-between;
+}
+.logbtnYes{
+    background-color:#ff5722;
+    width:5rem;
+}
+.logbtnNo{
+    background-color:#fff;
+    width:5rem;
+    color:black;
+    border:1px solid;
+}
+
+@media screen and (max-width:600px){
+    .logoutContainer{
+        width:19rem;
+        
+    }
+}
