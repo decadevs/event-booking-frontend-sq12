@@ -6,6 +6,7 @@ import { DashboardPage } from './pages/dashboard/DashboardPage';
 import { ContextProvider } from './utils/context';
 import { Bookerpallette} from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import EventCard from './pages/event-card';
 
 
 
@@ -24,8 +25,9 @@ function App() {
      Your Nav here ...
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<DemoPage />} />
+          {/* <Route path='' element={<DemoPage />} /> */}
           <Route path='/dashboard' element={<DashboardPage />} />
+          <Route path='/event-card' element={<EventCard />} />
         </Routes>
       </BrowserRouter>
       Your Footer here... 
