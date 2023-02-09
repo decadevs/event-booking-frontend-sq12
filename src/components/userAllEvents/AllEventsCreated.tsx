@@ -3,6 +3,9 @@ import {FilterAltOutlined, OpenInNewOutlined} from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import EventImg from '../../assets/userallevent/image2.png'
+import Modal from 'react-modal';
+import React from 'react';
+import TicketsSummary from './TicketsSummary';
 
 const Container = styled.div`
     width: auto;
@@ -113,7 +116,20 @@ margin-right: 20px;
 
 
 const AllEventsCreated = () => {
+
+  //modal states and open-close functions
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+  //modal states ends
   return (
+    <>
     <Container>
     {/* First Bold header */}
       <Wrapper>
@@ -188,11 +204,13 @@ const AllEventsCreated = () => {
             </Button>
           </CardDetails>
           <CardDetails>
-                <Link to={'/login'} style={{
+                <Link to={'#'} style={{
                   textDecoration:"underline",
                   color:"#FF5722",
                   fontSize:"12px",
-                  }}>
+                  }}
+                  onClick={openModal}
+                  >
                     View Tickets sold
                 </Link>
           </CardDetails>
@@ -202,7 +220,16 @@ const AllEventsCreated = () => {
         </Fourth>
       </CardContainer>
       {/* Card Ends */}
+    
     </Container>
+      <Modal
+      isOpen={modalIsOpen}
+      onRequestClose={closeModal}
+      contentLabel="Example Modal"
+      >
+        <TicketsSummary closeModal={closeModal}/>
+      </Modal>
+      </>
   )
 }
 
