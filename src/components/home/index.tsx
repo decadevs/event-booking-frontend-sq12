@@ -10,23 +10,6 @@ const Main = styled.div`
   justify-content: flex-end;
   margin: 0 auto;
 
-   
-
-  .cont{
-    background-color: wheat;
-  }
-
-    .contact-container{
-        position: absolute;
-        left: 5rem;
-        top: 10rem;
-        
-    }
-    .info-contact{
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin-bottom: 5rem;
-    }
 
     .contain-text{
         margin-bottom: -0.5rem;
@@ -46,11 +29,6 @@ const Main = styled.div`
         border: 0.5px solid black;
         background-color: #E5E9E9;
     }
-
-    
-
-    
-
 
     .container{
         position: absolute;
@@ -128,22 +106,6 @@ const Main = styled.div`
 export const Demo: React.FC = () => {
 return (
    <Main>
-    <div className="cont"> 
-        <div className="contact-container">
-            <h3 className="info-contact">Contact information</h3>         
-             <div>
-                <label htmlFor="name">
-                    <p className="contain-text">Name</p>
-                    <input type="text" className="input-btn"/>
-                </label>
-                <div>
-                    <label htmlFor="email">
-                        <p className="contain-text">Email</p>
-                        <input type="email" className="input-btn" />
-                    </label>
-                </div>
-            </div>
-        </div>
         <div className="container">
 
             <h4 className="summary">Ticket Summary</h4>
@@ -179,7 +141,6 @@ return (
                <button type="submit" className="btn btn-primary">Buy Ticket</button>
                </div>
             </div>
-        </div>
         </div>
         </Main>
 )
