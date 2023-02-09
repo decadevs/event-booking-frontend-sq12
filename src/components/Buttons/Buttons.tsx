@@ -11,7 +11,7 @@ const Buttons: React.FC<Props> = ({
     width,
     onClick,
 }) => {
-    const styl = {
+    const style = {
         color: 'white',
         backgroundColor: '#ff5722',
         borderRadius: '10px',
@@ -21,7 +21,8 @@ const Buttons: React.FC<Props> = ({
         alignItems: 'center',
     };
     return (
-        <button onClick={onClick} style={{ ...styl, height, width }}    >    {children}
+        <button onClick={onClick} style={{ ...style, height, width }}>
+            {children}
         </button>);
 }
 export default Buttons;

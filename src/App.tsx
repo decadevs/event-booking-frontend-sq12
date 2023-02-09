@@ -21,17 +21,13 @@ function App() {
     <>
       <ContextProvider>
         <ThemeProvider theme={theme}>
-          Your Nav here ...
           <BrowserRouter>
             <Routes>
-              <Route path='' element={<DemoPage />} />
+              {/* <Route path='' element={<DemoPage />} /> */}
               <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/ticket' element={<Ticket />} />
-
-
             </Routes>
           </BrowserRouter>
-          Your Footer here...
         </ThemeProvider>
       </ContextProvider>
     </>
