@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { DemoPage } from './pages/demo'
 import { DashboardPage } from './pages/dashboard/DashboardPage';
@@ -30,6 +31,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       Your Footer here... 
+      <Footer />
      </ThemeProvider>
     </ContextProvider>
     </>
