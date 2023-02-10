@@ -22,22 +22,26 @@
   padding-top: 3rem;
   max-width: 45%;
   line-height: 1.2;
+  color:white;
 }
 .event--desc--details{
     margin-left: 5%;
     text-align: left; 
     padding-top: 2rem; 
     max-width: 45%;
+    color:white;
+
 }
 
 .event--desc--goBackButton {
   margin-left: 5%;
   text-align: left;
   padding-top: 0rem;
+  color: white;
 }
  
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 345px){
 
     .event--desc--title {
         margin-left: auto;
@@ -46,6 +50,7 @@
         padding-top: 3rem;
         max-width: 100%;
         line-height: 1.2;
+        color: white;
       }
 }.event--desc--goBackButton{
     display: none;

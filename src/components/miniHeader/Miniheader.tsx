@@ -11,7 +11,9 @@ const MiniHeader = () => {
     title: "DECAGON SQ012 GRADUATION",
     description: "come and see us deliver premium entertainment as usual",
   };
-  return (
+  return ( 
+
+    
     <div className="miniHeaderContainer">
       <div>
           <p className="event--desc--goBackButton">&larr; Go Back </p>
