@@ -103,7 +103,7 @@ const Main = styled.div`
 
 
 
-export const Demo: React.FC = () => {
+export const TicketSummary: React.FC = () => {
 return (
    <Main>
         <div className="container">
