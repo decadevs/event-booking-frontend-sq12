@@ -1,0 +1,18 @@
+
+.heroContainer{
+    background-image:url("../../assets/HeaderImg/header2.png");
+    height:20vh;
+    width: 100%;
+    padding-top: 1.2rem;
+}
+
+.goBack--button {
+margin-left: 10%;
+text-align: left;
+}
+.bookingpage--event--title{
+    margin-left: 10%;
+    margin-top: 3rem;
+    text-align: left;
+    font-size: 2rem;
+}

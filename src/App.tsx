@@ -5,6 +5,8 @@ import { DashboardPage } from './pages/dashboard/DashboardPage';
 import { ContextProvider } from './utils/context';
 import { Bookerpallette} from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Header from './components/header/Header';
+import MiniHeader from './components/miniHeader/Miniheader';
 
 
 
@@ -22,8 +24,11 @@ function App() {
      <ThemeProvider theme={theme}>
      Your Nav here ...
       <BrowserRouter>
+     {/* <Header /> */}
+     <MiniHeader />
+
         <Routes>
-          <Route path='' element={<DemoPage />} />
+          <Route path='/' element={<DemoPage />} />
           <Route path='/dashboard' element={<DashboardPage />} />
         </Routes>
       </BrowserRouter>
