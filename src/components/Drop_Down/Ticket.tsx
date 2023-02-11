@@ -2,7 +2,8 @@ import Buttons from '../Buttons/Buttons'
 import InputField from '../InputField/InputField'
 import React, { useState } from 'react'
 import Dropdown from './DropDown'
-import { FormControl, InputLabel } from '@mui/material'
+import { Box, FormControl, InputLabel, SelectChangeEvent } from '@mui/material'
+import { width } from '@mui/system'
 
 export default function Ticket() {
     const [inputValue, setInputValue] = useState({ name: '' })
@@ -36,39 +37,37 @@ export default function Ticket() {
 
     return (
         <div>
-            <div>
-                <Buttons
-                    width="100px"
-                    height="100px"
-                    onClick={() => console.log('You clicked on the circle!')}
-                    children="Submit"
-                />
-            </div>
+
+            <Buttons
+                width="100px"
+                height="100px"
+                onClick={() => console.log('You clicked on the circle!')}
+                content={"Submit"} />
+
 
             <InputField
-                type={'email'}
+                type={'text'}
                 value={name}
                 name="name"
                 placeholder={'Email'}
-                onChange={handle}
+                onChange={handle} selectedValue={undefined} />
+
+
+            <p> Location</p>
+            <Dropdown
+                id={''}
+                title={''}
+                label={''}
+                options={options}
+                onChange={handleChange}
+                value={''}
+                boxSx={{ width: 150 }}
             />
 
-            <div>
-                <FormControl variant='outlined' style={{ marginTop: 100, marginLeft: 100 }}>
-                    {/* <InputLabel shrink>Name</InputLabel> */}
-                    <Dropdown
-                        id={''}
-                        name={'Name'}
-                        options={options}
-                        title={''}
-                        handleChange={handleChange}
-                        selectedValue={selectedVal}
-                        width='150px'
-                        height='50px'
 
-                    />
-                </FormControl>
-            </div>
-        </div>
+        </div >
     )
 }
+
+
+

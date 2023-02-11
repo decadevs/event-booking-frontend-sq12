@@ -1,38 +1,49 @@
-import { InputLabel, Select, SelectChangeEvent } from "@mui/material";
-import React from "react";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 interface Props {
-    id: string;
-    name: string;
-    options: Array<{ label: string; value: any }>;
-    title: string;
-    handleChange: (event: SelectChangeEvent<any>, child: React.ReactNode) => void;
-    selectedValue: any;
-    height?: string;
-    width?: string;
-
+    id: string,
+    title: string
+    label: string;
+    options: Array<{ value: any; label: string }>;
+    onChange: (event: SelectChangeEvent) => void;
+    value: any;
+    boxSx?: Record<string, unknown>;
 }
-const Dropdown = ({
+
+export default function Dropdown({
     id,
-    name,
-    options,
     title,
-    handleChange,
-    selectedValue,
-    height,
-    width
-}: Props) => (
-    <>
-        <p>{title}</p>
-        <InputLabel> {name} </InputLabel>
-        <Select label='name' id={id} name={name} onChange={handleChange} value={selectedValue} style={{ width: width, height: height }}>
+    label,
+    options,
+    onChange,
+    value,
+    boxSx,
+}: Props) {
+    return (
+        <Box sx={boxSx}>
+            <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+                <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={value}
+                    onChange={onChange}
+                    title={title}
+                    label={label}
+                >
+                    {options.map(({ value, label }) => (
+                        <MenuItem key={value} value={value}>
+                            {label}
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+        </Box>
+    );
+}
 
-            {options.map((option) => (
-                <option key={option.value} value={option.value}>
-
-                    {option.label}
-                </option>
-            ))}
-        </Select>
-    </>
-);
-export default Dropdown;
