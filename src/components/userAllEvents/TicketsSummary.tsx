@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import {CancelOutlined} from '@mui/icons-material';
+import {TicketsSummaryData, SummaryData} from './data'
 
 const TSummaryContainer = styled.div`
 background: #fff;
@@ -59,49 +60,56 @@ margin: 0;
 `
 
 interface Props{
-    closeModal: () => void
+    closeModal: () => void,
+    id: string
 }
 
 
-const TicketsSummary: React.FC<Props> = ({closeModal}) => {
+const TicketsSummary: React.FC<Props> = ({closeModal, id}) => {
+
+    const ticket:SummaryData = TicketsSummaryData.find((ticket)=>ticket.id == id)!
+
+
     return (
-        <TSummaryContainer className="ReactModal__Content ReactModal__Content--after-open">
-            <TSummaryHeader>
-                <TSummary>Tickets Summary</TSummary>
-                <TSummary><CancelOutlined onClick={closeModal}/></TSummary>
-            </TSummaryHeader>
-            <TSummaryBigHeader>
-                <TSummarySmall>Total</TSummarySmall>
-                <TSummaryBig>N306,000</TSummaryBig>
-            </TSummaryBigHeader>
-            <TSummaryBody>
-                <TSummaryBodyQty>
-                    <TSummaryBig>VVIP Tickets</TSummaryBig>
-                    <TSummarySmall>-3 x 300000</TSummarySmall>
-                </TSummaryBodyQty>
-                <TSummaryBodyPrice>
-                    <TSummaryBig style={{margin:"10px"}}>N300000</TSummaryBig>
-                </TSummaryBodyPrice>
-            </TSummaryBody>
-            <TSummaryBody>
-                <TSummaryBodyQty>
-                    <TSummaryBig>VVIP Tickets</TSummaryBig>
-                    <TSummarySmall>-3 x 300000</TSummarySmall>
-                </TSummaryBodyQty>
-                <TSummaryBodyPrice>
-                    <TSummaryBig style={{margin:"10px"}}>N350000</TSummaryBig>
-                </TSummaryBodyPrice>
-            </TSummaryBody>
-            <TSummaryBody>
-                <TSummaryBodyQty>
-                    <TSummaryBig>Regular Tickets</TSummaryBig>
-                    <TSummarySmall>-15 x 5000</TSummarySmall>
-                </TSummaryBodyQty>
-                <TSummaryBodyPrice>
-                    <TSummaryBig style={{margin:"10px"}}>N750000</TSummaryBig>
-                </TSummaryBodyPrice>
-            </TSummaryBody>
-        </TSummaryContainer>
+        <>
+            <TSummaryContainer className="ReactModal__Content ReactModal__Content--after-open">
+                <TSummaryHeader>
+                    <TSummary>Tickets Summary</TSummary>
+                    <TSummary><CancelOutlined onClick={closeModal}/></TSummary>
+                </TSummaryHeader>
+                <TSummaryBigHeader>
+                    <TSummarySmall>Total</TSummarySmall>
+                    <TSummaryBig>{ticket.Total}</TSummaryBig>
+                </TSummaryBigHeader>
+                <TSummaryBody>
+                    <TSummaryBodyQty>
+                        <TSummaryBig>VVIP Tickets</TSummaryBig>
+                        <TSummarySmall>-{`${ticket.VVIP.qty} x ${ticket.VVIP.price}`}</TSummarySmall>
+                    </TSummaryBodyQty>
+                    <TSummaryBodyPrice>
+                        <TSummaryBig style={{margin:"10px"}}>N{ticket.VVIPTotal}</TSummaryBig>
+                    </TSummaryBodyPrice>
+                </TSummaryBody>
+                <TSummaryBody>
+                    <TSummaryBodyQty>
+                        <TSummaryBig>VIP Tickets</TSummaryBig>
+                        <TSummarySmall>-{`${ticket.VIP.qty} x ${ticket.VIP.price}`}</TSummarySmall>
+                    </TSummaryBodyQty>
+                    <TSummaryBodyPrice>
+                        <TSummaryBig style={{margin:"10px"}}>N{ticket.VIPTotal}</TSummaryBig>
+                    </TSummaryBodyPrice>
+                </TSummaryBody>
+                <TSummaryBody>
+                    <TSummaryBodyQty>
+                        <TSummaryBig>Regular Tickets</TSummaryBig>
+                        <TSummarySmall>-{`${ticket.Regular.qty} x ${ticket.Regular.price}`}</TSummarySmall>
+                    </TSummaryBodyQty>
+                    <TSummaryBodyPrice>
+                        <TSummaryBig style={{margin:"10px"}}>N{ticket.RegularTotal}</TSummaryBig>
+                    </TSummaryBodyPrice>
+                </TSummaryBody>
+            </TSummaryContainer>
+        </>
     )
 }
 
