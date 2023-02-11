@@ -13,6 +13,8 @@ interface Props {
     onChange: (event: SelectChangeEvent) => void;
     value: any;
     boxSx?: Record<string, unknown>;
+    placeholder?: string
+
 }
 
 export default function Dropdown({
@@ -23,18 +25,23 @@ export default function Dropdown({
     onChange,
     value,
     boxSx,
+    placeholder
+
 }: Props) {
     return (
         <Box sx={boxSx}>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">{label}</InputLabel>
                 <Select
+                    defaultValue=""
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={value}
                     onChange={onChange}
                     title={title}
                     label={label}
+                    placeholder={placeholder}
+
                 >
                     {options.map(({ value, label }) => (
                         <MenuItem key={value} value={value}>

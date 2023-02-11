@@ -3,7 +3,7 @@ import { FormContainer, Input } from "./style";
 
 interface Props {
     name: string;
-    type: "text" | "dropdown" | "number" | "email";
+    type: "text" | "number" | "email";
     [key: string]: any;
     label?: string
     value: string

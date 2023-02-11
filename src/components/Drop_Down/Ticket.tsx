@@ -4,6 +4,9 @@ import React, { useState } from 'react'
 import Dropdown from './DropDown'
 import { Box, FormControl, InputLabel, SelectChangeEvent } from '@mui/material'
 import { width } from '@mui/system'
+import styled from "styled-components"
+
+
 
 export default function Ticket() {
     const [inputValue, setInputValue] = useState({ name: '' })
@@ -39,18 +42,20 @@ export default function Ticket() {
         <div>
 
             <Buttons
-                width="100px"
+                width="1080px"
                 height="100px"
                 onClick={() => console.log('You clicked on the circle!')}
                 content={"Submit"} />
 
 
             <InputField
+                style={{ width: "90px" }}
+
                 type={'text'}
                 value={name}
                 name="name"
                 placeholder={'Email'}
-                onChange={handle} selectedValue={undefined} />
+                onChange={handle} />
 
 
             <p> Location</p>

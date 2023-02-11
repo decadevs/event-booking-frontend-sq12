@@ -6,6 +6,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     height: string;
     width: string;
     onClick: () => void;
+    type?: "button" | "submit" | "reset";
 }
 const Button: React.FC<Props> = ({
     content,
@@ -13,11 +14,12 @@ const Button: React.FC<Props> = ({
     height,
     width,
     onClick,
+    type,
     ...props
 }) => {
     const className = styles[styleType];
     return (
-        <button className={className} onClick={onClick} style={{ height, width }} {...props}>
+        <button className={className} onClick={onClick} style={{ height, width }} type={type} {...props}>
             {" "}
             {content}
         </button>
