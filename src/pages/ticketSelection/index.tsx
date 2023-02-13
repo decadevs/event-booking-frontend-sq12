@@ -30,6 +30,7 @@ const stlyedSelection = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    // marginTop: "4em",
     // height: "80px"
   },
   formContainer: {
@@ -41,6 +42,7 @@ const stlyedSelection = makeStyles((theme) => ({
   },
   mapBtn: {
     backgroundColor: "rgba(0, 50, 47, 0.05)",
+    marginTop: "2em",
     // width: "74px",
     // height: "22px",
     fontFamily: "Manrope",
@@ -57,6 +59,7 @@ const stlyedSelection = makeStyles((theme) => ({
     // top: "557px",
     background: "rgba(0, 50, 47, 0.05)",
     borderRadius: "4px",
+
   },
   intro: {
     fontFamily: "Manrope",
@@ -186,7 +189,6 @@ const stlyedSelection = makeStyles((theme) => ({
     height: "100px",
     },
     mapBtn: {
-        margin: "1em"
     },
     selection:{
         display: "flex",
@@ -195,9 +197,7 @@ const stlyedSelection = makeStyles((theme) => ({
         alignItems: "center",
     },
     eventName:{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        paddingLeft: "1em"
     },
 }}));
 
@@ -240,7 +240,7 @@ const TicketSelection: React.FC = () => {
                 <input type="text" className="form-control input-lg" />    
                 </div>    
                 <div className="form-group">         
-                <label>Second name</label>         
+                <label>Email</label>         
                 <input type="text" className="form-control input-lg" />    
                 </div>  
             </form>
@@ -285,7 +285,7 @@ const TicketSelection: React.FC = () => {
                 </div>
                 <p className={selections.qty}>100 available</p>
             </div>
-            <p
+            <div className={selections.eventName}
                 style={{
                 padding: "0.8em",
                 width: "350px",
@@ -298,7 +298,7 @@ const TicketSelection: React.FC = () => {
                 }}
             >
                 Table for 4 (Gold) VVIP “Eko All Night Pool Party Festival”
-            </p>
+            </div>
             <p
                 style={{
                 fontFamily: "Manrope",
@@ -337,7 +337,7 @@ const TicketSelection: React.FC = () => {
                 </div>
                 <p className={selections.qty}>100 available</p>
             </div>
-            <p
+            <div className={selections.eventName}
                 style={{
                     padding: "0.8em",
                 width: "350px",
@@ -350,7 +350,7 @@ const TicketSelection: React.FC = () => {
                 }}
             >
                 Table for 4 (Silver) VVIP “Eko All Night Pool Party Festival”
-            </p>
+            </div>
             <p
                 style={{
                 fontFamily: "Manrope",
