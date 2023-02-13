@@ -50,6 +50,7 @@ const FormInput = () => {
           name="text"
           placeholder="Search events"
           label="what are you looking"
+          // style={{ width: "200px" }}
          
         />
         <InputField

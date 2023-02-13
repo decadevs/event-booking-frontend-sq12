@@ -28,7 +28,7 @@ export const Selected = styled.select`
   background-size: 1.65rem auto;
 
   @media (max-width: 768px) {
-    width: 250px;
+    
 
   }
 `;
