@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import {CancelOutlined} from '@mui/icons-material';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
+import {TicketClass} from './data';
+import {useState} from 'react';
 
 const TSummaryContainer = styled.div`
 background: #fff;
@@ -70,47 +71,58 @@ justify-content: center;
 
 
 const TicketClassModal = () => {
+
+    const [ticketClass, setTicketClass] = useState("")
+    
+
+    const handleChange = (event: React.SyntheticEvent<Element, Event>, checked: boolean) => {
+        // console.log(event.target.value)
+        setTicketClass((event.target as HTMLInputElement).value)
+    }
+
+    console.log(ticketClass)
+
+    
     return (
         <TSummaryContainer>
             {/* FORM START */}
             <FormControl>
                 <RadioGroup
                     aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="VVIP Tickets"
                     name="radio-buttons-group"
                 >
                    
             <TSummaryBody>
                 <TSummaryBodyQty>
                     {/* form input */}
-                <FormControlLabel value="VVIP Tickets" control={<Radio />} label="VVIP Tickets" />
-                    <TSummarySmall>100 available</TSummarySmall>
+                <FormControlLabel value="VVIP Tickets" control={<Radio />} label="VVIP Tickets" onChange={handleChange}/>
+                    <TSummarySmall>{TicketClass.VVIP.quantity} available</TSummarySmall>
                 </TSummaryBodyQty>
                     {/* price */}
                 <TSummaryBodyPrice>
-                    <TSummaryBig style={{margin:"10px"}}>N200,000</TSummaryBig>
+                    <TSummaryBig style={{margin:"10px"}}>N{TicketClass.VVIP.totalPrice}</TSummaryBig>
                 </TSummaryBodyPrice>
             </TSummaryBody>
 
             <TSummaryBody>
                 <TSummaryBodyQty>
                     {/* form input */}
-                <FormControlLabel value="VIP Tickets" control={<Radio />} label="VIP Tickets" />
-                    <TSummarySmall>85 available</TSummarySmall>
+                <FormControlLabel value="VIP Tickets" control={<Radio />} label="VIP Tickets" onChange={handleChange}/>
+                    <TSummarySmall>{TicketClass.VIP.quantity} available</TSummarySmall>
                 </TSummaryBodyQty>
                 <TSummaryBodyPrice>
-                    <TSummaryBig style={{margin:"10px"}}>N350000</TSummaryBig>
+                    <TSummaryBig style={{margin:"10px"}}>N{TicketClass.VIP.totalPrice}</TSummaryBig>
                 </TSummaryBodyPrice>
             </TSummaryBody>
 
             <TSummaryBody>
                 <TSummaryBodyQty>
                     {/* FORM INPUT */}
-                    <FormControlLabel value="Regular Ticket" control={<Radio />} label="Regular Ticket" />
-                    <TSummarySmall>-15 x 5000</TSummarySmall>
+                    <FormControlLabel value="Regular Ticket" control={<Radio />} label="Regular Ticket" onChange={handleChange}/>
+                    <TSummarySmall>-{TicketClass.Regular_Ticket.quantity}</TSummarySmall>
                 </TSummaryBodyQty>
                 <TSummaryBodyPrice>
-                    <TSummaryBig style={{margin:"10px"}}>N750000</TSummaryBig>
+                    <TSummaryBig style={{margin:"10px"}}>N{TicketClass.Regular_Ticket.totalPrice}</TSummaryBig>
                 </TSummaryBodyPrice>
             </TSummaryBody>
 
