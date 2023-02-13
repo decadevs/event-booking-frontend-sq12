@@ -11,6 +11,7 @@ import EventCard from './pages/event-card';
 import TicketSelection from './pages/ticketSelection'
 
 
+
 const theme = createTheme({
   palette: {
     ...Bookerpallette
@@ -27,7 +28,7 @@ function App() {
             <Routes>
               {/* <Route path='' element={<DemoPage />} /> */}
               <Route path='/dashboard' element={<DashboardPage />} />
-              <Route path='/ticket' element={<Ticket />} />
+              <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/ticket-selection' element={<TicketSelection />} />
             </Routes>
