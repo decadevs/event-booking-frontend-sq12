@@ -1,16 +1,11 @@
 import styled from "styled-components";
-
-
 export const Input = styled.input`
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
   width: 100%;
   height: 100%;
-
-
 `;
-
 export const Selected = styled.select`
   border: 1px solid #ccc;
   padding: 10px;
@@ -26,11 +21,6 @@ export const Selected = styled.select`
   background-position: right 0.7em top 50%;
   padding-right: 1rem;
   background-size: 1.65rem auto;
-
-  @media (max-width: 768px) {
-    
-
-  }
 `;
 
 export const FormContainer = styled.div`
@@ -38,7 +28,6 @@ export const FormContainer = styled.div`
   flex-direction: column;
   width: 250px;
   margin-right: 2rem;
-
   label{    
     color:white;    
     font-size:10px;   
@@ -46,14 +35,9 @@ export const FormContainer = styled.div`
      line-height:10px;    
      font-weight:150;
   }
-
   @media (max-width: 768px) {
     width: 100%;
     margin: 0px;
     padding: 0 5%;
-   
   }
 `;
-
-
-
