@@ -7,6 +7,7 @@ import { useState } from "react";
 export const Modal = (props:{ showModal:any, setShowModal:any }) => {
   const [logoutState, setLogoutState] = useState(true);
   const [isLogedOut, setIsLogedOut] = useState(true);
+  
   const close = () => {
     props.setShowModal(true);
     setIsLogedOut((pre) => !pre);

@@ -1,17 +1,16 @@
 .modalStyle{
     position:relative;
     background:#ffff;
+    z-index: 5;
 }
 
 .modalContainer{
-    position: absolute;
-    margin-top: 30px;
+    /* position: absolute; */
+    margin-left:-25rem;
+    width:32rem;
+    margin-top: 20rem;
     left: -40px;
-    
-  
-    
     padding: 1rem;
-    z-index: 99;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
@@ -42,7 +41,8 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-  padding: 1rem 0.2rem 6rem 1rem;
+   padding: 1rem 0.2rem 6rem 1rem;
+   margin-top:15px;
 }
 
 .headerText{
@@ -85,29 +85,34 @@
 
 @media screen and (max-width:600px){
     .modalStyle{
-        position:absolute;
+        position:relative;
         align-items: center;
         right:18.35rem
     }
 }
 @media screen and (max-width:896px){
     .modalStyle{
-        position:absolute;
+        position:relative;
         align-items: center;
         right:22.35rem
     }
 }
 @media screen and (max-width:740px){
     .modalStyle{
-        position:absolute;
+        position:relative;
         align-items: center;
         right:22.7rem
     }
 }
-@media screen and (max-width:1180){
+@media screen and (max-width:1180px){
     .modalStyle{
-        position:absolute;
+        position:relative;
         align-items: center;
         right:22.7rem
+    }
+}
+@media screen and (max-width:1280px){
+    .modalContainer{
+        width:15rem;
     }
 }

@@ -3,7 +3,7 @@ import Footer from './components/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { DemoPage } from './pages/demo'
 import { DashboardPage } from './pages/dashboard/DashboardPage';
-import { BookrProvider } from './utils/context';
+// import { BookrProvider } from './utils/context';
 import Navbar from './components/navbar/Navbar';
 
 import { ContextProvider } from './utils/context';
@@ -23,7 +23,7 @@ const theme = createTheme({
 function App() {
   return (
     <>
-    <BookrProvider>
+    {/* <BookrProvider> */}
      
      <Navbar />
       <BrowserRouter>
@@ -34,12 +34,12 @@ function App() {
       </BrowserRouter>
 
       Your Footer here... 
-    </BookrProvider>
+    {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
           <BrowserRouter>
             <Routes>
-              {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='' element={<DemoPage />} />
               <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/ticket' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
