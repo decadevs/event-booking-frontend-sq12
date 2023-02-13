@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: '#10375C',
     padding: '1em',
-    position: 'absolute',
+    position: 'relative',
     bottom: 0,
     display: 'flex',
     height: '26em',
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(1),
     }
   },
-  '@media (min-width: 600px)': {
+  '@media (min-width: 768px)': {
     categoryList: {
       display: 'block',
       position: 'static',

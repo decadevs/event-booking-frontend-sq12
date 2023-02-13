@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-const BookrContext = createContext<{} | null>(null)
+export const BookrContext = createContext<{} | null>(null)
 
 export const ContextProvider = ({children}: {children: React.ReactNode} ) => {
     const [state, setState] = useState({});
