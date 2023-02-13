@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import CardActions from "@material-ui/core/CardActions";
-import InputField from "../../components/InputField/InputField";
-import Dropdown from "../../components/Drop_Down/DropDown";
+// import PaystackPop from '@paystack/inline-js'
+import PaystackPop from '@paystack/inline-js'
+
 import { SelectChangeEvent } from "@mui/material";
-import Buttons from "../../components/Buttons/Buttons";
+import Dropdown from "../Drop_Down/DropDown";
+import Buttons from "../Buttons/Buttons";
+
+
+
 
 // const Dropdown = styled(Form)
 export default function App() {
@@ -15,16 +17,32 @@ export default function App() {
     const [valued, setValued] = useState()
 
 
-    const changeValued = (selectedVal: any) => {
+    const changeValued = (selectedVal: any,) => {
+        // e.preventDefault();
 
         // alert(selectedVal)
         if (selectedVal === "Paystack") {
-            alert('we  move from here ')
+            let paystack = new PaystackPop()
+            paystack.newTransaction({
+                key: "pk_test_f6c0cac5e4c9c3c53f15171d570d8376e758fd66",
+                // email,
+                // firstName,
+                // lastName,
+                // amount,
+                onSuccess(transaction: any) {
+                    let message = `Payment completed!, Reference ${transaction.reference}`
+                    alert(message)
+                },
+                onCancel() {
+                    alert(`You have cancelled payment`)
+                }
+            })
         }
-        // console.log(valued)
-
-
     }
+    // console.log(valued)
+
+
+
 
     const handleChange = (e: any) => {
         setSelectedVal(e.target.value)
@@ -37,19 +55,28 @@ export default function App() {
         { label: 'Online Payment', value: 'Online' }
     ]
     return (
-        <div style={{}}>
+        <div style={{
+            display: "flex",
+            // alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            marginTop: 10
+        }}>
             <Card style={{
 
-                width: 500,
+                // width: 500,
                 height: 300,
-                backgroundColor: "yellow",
+                backgroundColor: "#f0f0f0",
+                boxShadow: "10px 10px 5px 5px rgba(78,0,0,0.2)",
+                // margin: 40
             }}>
                 <CardContent>
-
-                    <h2 className="payment-type"> Payment Type
-                    </h2>
-                    <p className="payment-option">Select from the options your preferred payment option.
-                    </p>
+                    <div className="payment-writeup">
+                        <h2 className="payment-type" style={{ paddingBottom: 15 }}> Payment Type
+                        </h2>
+                        <p className="payment-option" style={{ paddingBottom: 10 }}>Select from the options your preferred payment option.
+                        </p>
+                    </div>
 
                     <div className="payment-card">
                         <h4 className="payment-typeB">Payment Type</h4>
