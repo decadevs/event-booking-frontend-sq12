@@ -8,6 +8,7 @@ import { Bookerpallette } from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
+import FormInput from './components/search';
 
 
 const theme = createTheme({
@@ -25,6 +26,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='/search' element={< FormInput/>} />
               <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/ticket' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />

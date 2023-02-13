@@ -1,28 +1,20 @@
-import React from "react";
-interface Props {
-    children?: React.ReactNode;
-    height: string;
-    width: string;
-    onClick: () => void;
+import React, { ButtonHTMLAttributes } from "react";
+import styles from "./Buttons.module.css";
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+  styleType?: "primary" | "secondary";
+  content: "string" | React.ReactNode;
 }
-const Buttons: React.FC<Props> = ({
-    children,
-    height,
-    width,
-    onClick,
+const Button: React.FC<Props> = ({
+  content,
+  styleType = "primary",
+  ...props
 }) => {
-    const style = {
-        color: 'white',
-        backgroundColor: '#ff5722',
-        borderRadius: '10px',
-        border: '1px solid',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    };
-    return (
-        <button onClick={onClick} style={{ ...style, height, width }}>
-            {children}
-        </button>);
-}
-export default Buttons;
+  const className = styles[styleType];
+  return (
+    <button className={className} {...props}>
+      {" "}
+      {content}
+    </button>
+  );
+};
+export default Button;
