@@ -1,33 +1,24 @@
-import React from 'react'
+import React from "react";
+import { FormContainer, Input } from "./style";
 
-interface InputFieldProps {
-  value: string
-  label?: string
-  name: string
-  placeholder?: string
-  type: string
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+interface Props {
+    name: string;
+    type: "text" | "number" | "email";
+    [key: string]: any;
+    label?: string
+    value: string
+    placeholder?: string
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+
 }
+const InputField: React.FC<Props> = ({ type, label, onChange, value, name, placeholder, ...props }) => {
 
-const InputField: React.FC<InputFieldProps> = ({
-  value,
-  label,
-  name,
-  placeholder,
-  type,
-  onChange,
-}) => (
-  <div className="form-group">
-    {label && <label htmlFor="input-field">{label}</label>}
-    <input
-      type={type}
-      value={value}
-      name={name}
-      className="form-control"
-      placeholder={placeholder}
-      onChange={onChange}
-    />
-  </div>
-)
+    return (
+        <FormContainer>
+            <label htmlFor={label}>{label}</label>
+            <Input type={type} value={value} name={name} placeholder={placeholder} onChange={onChange} {...props} />
+        </FormContainer>);
 
-export default InputField
+
+};
+export default InputField;
