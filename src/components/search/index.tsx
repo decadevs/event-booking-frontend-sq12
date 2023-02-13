@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Buttons/Buttons";
 import InputField from "../../components/InputField/InputField";
 import { FaArrowRight } from "react-icons/fa";
+import Dropdown from "../Drop_Down/DropDown";
 
 const Main = styled.div`
   height: 120px;
@@ -39,6 +40,17 @@ interface Event {
   date: string;
 }
 
+const options=[
+  {label:"Lagos, Nigeria", value:"Lagos"}, 
+  {label:"Delta", value:"Delta"}, 
+  {label:"Anambra", value:"Anambra"}]
+
+const days = [
+  {label:"Any date",value:"ANY"},
+  {label: "Today",value:"Today"},
+  {label: "Tomorrow",value:"Tomorrow"},
+   {label:"This week", value:"This week"},]
+
 const FormInput = () => {
  
 
@@ -46,30 +58,40 @@ const FormInput = () => {
     <Main>
       <Form>
         <InputField
+         onChange={(e) => {}}
+          value=""
+         key=""
           type="text"
           name="text"
           placeholder="Search events"
           label="what are you looking"
-          // style={{ width: "200px" }}
+         
          
         />
-        <InputField
-          type="dropdown"
-          name="location"
+        <p>Location</p>
+        <Dropdown
+          id=""
+          title=""
           placeholder="Lagos, Nigeria"
-          options={["Lagos, Nigeria", "Delta", "Anambra"]}
           label="Location"
-         
+          value={""}
+          onChange={(e) => { } } 
+          options={options}         
         />
-        <InputField
-          type="dropdown"
-          name="date"
-          options={["Any date", "Today", "Tomorrow", "This week"]}
+        <p>When</p>
+        <Dropdown
+          id=""
+          title=""
+          value={""}
+          onChange={(e) => { } }
+          options={days}
           label="When"
         
         />
         <Button
-          
+          height=""
+          width=""
+          onClick={() => console.log("clicked")}
           styleType="secondary"
           content={<FaArrowRight style={{ color: "#fff", fontSize: "18px" }} />}
         />
