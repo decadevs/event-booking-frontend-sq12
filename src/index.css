@@ -29,14 +29,14 @@ a:hover {
  } */
 
 body {
-  margin: 0;
-  display: flex;
+  /* margin: 0;
+  display: flex; */
   /* place-items: center; */
   /* min-width: 320px;
   min-height: 100vh;
   background-color: #E5E5E5; */
 } 
-
+/* 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -59,10 +59,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 /* modal style start */
-div.ReactModal__Overlay.ReactModal__Overlay--after-open{
+/* div.ReactModal__Overlay.ReactModal__Overlay--after-open{
   position: fixed;
   top: 80px !important;
 }
@@ -77,7 +77,7 @@ div.ReactModal__Content.ReactModal__Content--after-open{
     width: 300px;
     height: fit-content;
     margin: 0px auto;
-}
+} */
 /* modal style ends */
 
 /* @media (prefers-color-scheme: light) {
