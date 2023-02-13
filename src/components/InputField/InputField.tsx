@@ -1,47 +1,24 @@
 import React from "react";
-import { FormContainer, Input, Selected } from "./style";
-import FormControl from "@material-ui/core/FormControl";
-import { InputLabel } from "@mui/material";
-
+import { FormContainer, Input } from "./style";
 
 interface Props {
-  name: string;
-  type: "text" | "dropdown";
-  options?: string[];
-  [key: string]: any;
+    name: string;
+    type: "text" | "number" | "email";
+    [key: string]: any;
+    label?: string
+    value: string
+    placeholder?: string
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+
 }
-const InputField: React.FC<Props> = ({ type, options, label, ...props }) => {
-  switch (type) {
-    case "text":
-      return (
+const InputField: React.FC<Props> = ({ type, label, onChange, value, name, placeholder, ...props }) => {
+
+    return (
         <FormContainer>
-          {" "}
-          <label htmlFor={label}>{label}</label>{" "}
-          <Input type="text" {...props} />{" "}
-        </FormContainer>
-      );
-    case "dropdown":
-      return (
-        <FormContainer {...props}>
-          {" "}
-          <FormControl>
-            {" "}
-            <label htmlFor={label}>{label}</label>{" "}
-          </FormControl>{" "}
-          <Selected {...props}>
-            {" "}
-            {options &&
-              options.map((option) => (
-                <option key={option} value={option}>
-                  {" "}
-                  {option}
-                </option>
-              ))}
-          </Selected>{" "}
-        </FormContainer>
-      );
-    default:
-      return <input type="text" {...props} />;
-  }
+            <label htmlFor={label}>{label}</label>
+            <Input type={type} value={value} name={name} placeholder={placeholder} onChange={onChange} {...props} />
+        </FormContainer>);
+
+
 };
 export default InputField;
