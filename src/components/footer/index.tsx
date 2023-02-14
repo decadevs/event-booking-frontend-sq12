@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import stled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -14,6 +15,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '../../assets/searchIcon.png';
 // import SearchIcon from '@material-ui/icons/Search';
+import styled from 'styled-components';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '0.5em',
     width: '100%',
     marginLeft: '0',
-    height: '2.5em',
+    // height: '2.5em',
     display: 'flex',
     flexDirection: 'row',
     '&::placeHolder' :{
@@ -114,6 +116,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer:React.FC = () => {
   const classes = useStyles();
+  const Paragraph = styled.p`
+    color: #FFF;
+    font-size: 1em;
+  `
 
   return (
     <footer className={`${classes.footer} footer_mo`}>
@@ -217,7 +223,7 @@ const Footer:React.FC = () => {
                 InputProps={{
                     endAdornment: (
                     <InputAdornment position="end">
-                        <IconButton aria-label="search">
+                        <IconButton style={{width: '100%'}}  aria-label="search">
                         {/* <SearchIcon /> */}
                         <img src={SearchIcon} style={{color: '#FF5722'}} alt="search" />
                         </IconButton>
@@ -228,12 +234,14 @@ const Footer:React.FC = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Typography variant="subtitle1" align="center"  style={{ color: "#FFF !important"}} component="p">
-          {'Copyright © '
-          + new Date().getFullYear() + ' '}
-          <Link className={classes.link} href="#">
+        <Typography variant="subtitle1" align="center"  color='textPrimary' component="p">
+          <Paragraph>
+            {'Copyright © '
+            + new Date().getFullYear() + ' '}
+            <Link className={classes.link} href="#">
             All rights reserved.
           </Link>
+          </Paragraph>
         </Typography>
         <Typography style={{color:"white"}} component={'p'}>
             {/* hello */}

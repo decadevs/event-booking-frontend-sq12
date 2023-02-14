@@ -30,11 +30,11 @@ function App() {
         <Navbar />  
           <BrowserRouter>
             <Routes>
-              <Route path='' element={<DemoPage />} />
-              <Route path='/dashboard' element={<DashboardPage />} />
-              <Route path='/tickets' element={<Ticket />} />
-              <Route path='/event-card' element={<EventCard />} />
-              <Route path='/ticket-selection' element={<TicketSelection />} />
+              {/* <Route path='' element={<DemoPage />} /> */}
+              {/* <Route path='/dashboard' element={<DashboardPage />} /> */}
+              {/* <Route path='/tickets' element={<Ticket />} /> */}
+              {/* <Route path='/event-card' element={<EventCard />} /> */}
+              {/* <Route path='/ticket-selection' element={<TicketSelection />} /> */}
             </Routes>
           </BrowserRouter>
           <Footer />
