@@ -51,7 +51,7 @@ const FormInput = () => {
           placeholder="Search events"
           label="what are you looking" value={""} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
             throw new Error("Function not implemented.");
-          } }          // style={{ width: "200px" }}
+          } }         
          
         />
         <InputField
@@ -63,7 +63,7 @@ const FormInput = () => {
          
         />
         <InputField
-          type="dropdown"
+          type="date"
           name="date"
           options={["Any date", "Today", "Tomorrow", "This week"]}
           label="When"
