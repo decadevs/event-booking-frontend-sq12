@@ -15,7 +15,7 @@ const MiniHeader = () => {
 
     
     <div className="miniHeaderContainer">
-      <div>
+      <div><p></p><p></p><p></p><p></p>
           <p className="event--desc--goBackButton">&larr; Go Back </p>
           <h2 className="event--desc--title">{event.title}</h2>
           <p className="event--desc--details">{event.description}</p>
