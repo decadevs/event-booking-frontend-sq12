@@ -210,6 +210,15 @@ export const EventPage = () => {
         <div className={eventClasses.inputField}>
           <div className={eventClasses.inputData}>
             <InputField
+              name="name"
+              type={"text"}
+              label="Event Name"
+              value={eventTitle}
+              id={""}
+              onChange={(e) => setEventTitle(e.target.value)}
+            />
+
+            {/* <InputField
               label="Event Name"
               style={{
                 position: "relative",
@@ -224,10 +233,19 @@ export const EventPage = () => {
               name="name"
               placeholder=""
               onChange={(e) => setEventTitle(e.target.value)}
-            />
+            /> */}
           </div>
+
           <div className={eventClasses.inputData}>
             <InputField
+              name="name"
+              type={"text"}
+              label="Organizer"
+              value={organizer}
+              id={""}
+              onChange={(e) => setOrganizer(e.target.value)}
+            />
+            {/* <InputField
               label="Event Name"
               style={{
                 // position: "absolute",
@@ -242,13 +260,12 @@ export const EventPage = () => {
               name="name"
               placeholder=""
               onChange={(e) => setEventTitle(e.target.value)}
-            />
+            /> */}
           </div>
         </div>
         <div className={eventClasses.eventUpload}>
           <div className={eventClasses.uploadField}>
             <p>Upload Event Banner</p>
-
           </div>
         </div>
 
