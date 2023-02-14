@@ -99,6 +99,7 @@ import { SlCalender } from "react-icons/sl";
 import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Buttons/Buttons";
 import "./index.css";
+// import Navbar from "../../components/Navbar/Navbar";
 
 const eventStyles = makeStyles((theme) => ({
   eventContainer: {
@@ -287,6 +288,7 @@ export const EventPage = () => {
 
   return (
     <div className={eventClasses.eventContainer}>
+      {/* <Navbar /> */}
       <div className={eventClasses.eventMain}>
         <div className={`${eventClasses.iconInfo}`}>
           <AiOutlineInfoCircle style={{ color: "932F19" }} />
