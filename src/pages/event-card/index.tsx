@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { red } from "@mui/material/colors";
 import events from '../../assets/events.png'
 import Card from "../../components/eventCard";
+import Footer from "../../components/footer"
 
 interface card {
     handleClick: ()=> void,
@@ -187,231 +188,222 @@ const EventCard:React.FC = ()=>{
                     </div>
                 </Card>
             </Link>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
+                </Card>
+            </Link>
+            <Link style={{textDecoration: "none"}} to={`/event-detais/eventId`}>
+                <Card >
+                    <img src={events} alt="event banner" />
+                    <div className={classes.contents}>
+                        <div>
+                            <div className={classes.eventDate}>
+                                <p className={classes.eventMonth}>
+                                Oct
+                                </p> 
+                                <p className={classes.eventDay}>
+                                28
+                                </p>
+                            </div>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
+                            <h3 className={classes.eventHeading}>
+                                Event Name which can be long
+                            </h3>
+                            <p className={classes.eventDescription}>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Sit vivamus penatibus viverra aliquam diam. 
                             </p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {/* <div className={classes.cards}>
-                <img src={events} alt="event banner" />
-                <div className={classes.contents}>
-                    <div>
-                        <div className={classes.eventDate}>
-                            <p className={classes.eventMonth}>
-                            Oct
-                            </p> 
-                            <p className={classes.eventDay}>
-                            28
-                            </p>
-                        </div>
-                    </div>
-                    <div style={{display: 'flex', flexDirection: 'column',gap: '1em', justifyContent:'center'}}>
-                        <h3 className={classes.eventHeading}>
-                            Event Name which can be long
-                        </h3>
-                        <p className={classes.eventDescription}>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Sit vivamus penatibus viverra aliquam diam. 
-                        </p>
-                    </div>
-                </div>
-            </div> */}
+                </Card>
+            </Link>
         </div>
         <div className={classes.buttonDiv}>
         <button className={classes.btn}>Load More Events</button>
