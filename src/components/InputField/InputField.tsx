@@ -18,7 +18,7 @@ const InputField: React.FC<Props> = ({ type, label, onChange, value, name, id, p
         <Box sx={boxSx}>
             <FormControl fullWidth>
                 <TextField label={label}
-                    id="outlined-size-small" type={type}
+                    id="" type={type}
                     value={value}
                     name={name}
                     placeholder={placeholder}

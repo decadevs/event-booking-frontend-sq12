@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(1),
     }
   },
-  '@media (min-width: 600px)': {
+  '@media (min-width: 768px)': {
     categoryList: {
       display: 'block',
       position: 'static',
