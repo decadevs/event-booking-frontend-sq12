@@ -10,6 +10,7 @@ import { Bookerpallette } from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
+import Payment from './components/Payment/Payment';
 import TicketSelection from './pages/ticketSelection'
 
 
@@ -24,16 +25,19 @@ const theme = createTheme({
 function App() {
   return (
     <>
-    {/* </BookrProvider> */}
+      {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
-        <Navbar />  
+          <Navbar />
           <BrowserRouter>
             <Routes>
               <Route path='' element={<DemoPage />} />
               <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
+              <Route path='/payment' element={<Payment />} />
+
+
               <Route path='/ticket-selection' element={<TicketSelection />} />
             </Routes>
           </BrowserRouter>
