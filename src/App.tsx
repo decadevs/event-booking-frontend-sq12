@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
 import Payment from './components/Payment/Payment';
+import Publish from './pages/Publish/Publish';
 
 
 
@@ -31,11 +32,12 @@ function App() {
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/payment' element={<Payment />} />
+              <Route path='/publish' element={<Publish />} />
 
 
             </Routes>
           </BrowserRouter>
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </ContextProvider>
     </>

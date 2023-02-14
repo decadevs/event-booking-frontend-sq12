@@ -10,7 +10,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 const Button: React.FC<Props> = ({
     content,
-    styleType = "primary",
+    styleType = "primary" || "secondary",
     height,
     width,
     onClick,

@@ -66,7 +66,7 @@ export default function App() {
 
                 // width: 500,
                 height: 300,
-                backgroundColor: "#f0f0f0",
+                backgroundColor: "#C4C4C4",
                 boxShadow: "10px 10px 5px 5px rgba(78,0,0,0.2)",
                 // margin: 40
             }}>
@@ -81,7 +81,7 @@ export default function App() {
                     <div className="payment-card">
                         <h4 className="payment-typeB">Payment Type</h4>
 
-                        <Dropdown
+                        {/* <Dropdown
                             id={""}
                             title={""}
                             label={"Select"}
@@ -90,6 +90,16 @@ export default function App() {
                             value={undefined}
                             placeholder={"Select"}
                             boxSx={{ mt: 1, mb: 5 }}
+
+                        /> */}
+                        <Dropdown
+                            label={""}
+                            value={""}
+                            options={options}
+                            onChange={handleChange}
+                            boxSx={{ mt: 1, mb: 5, }}
+                            formSx={{ minWidth: 469 }}
+
 
                         />
                         <Buttons
