@@ -30,7 +30,7 @@ function App() {
               <Route path="/event-page" element={<EventPage />} />
             </Routes>
           </BrowserRouter>
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </ContextProvider>
     </>

@@ -28,7 +28,7 @@ export const Selected = styled.select`
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 250;
+  width: 250px;
   margin-right: 2rem;
   label{    
     color:white;    
