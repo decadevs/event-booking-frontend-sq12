@@ -11,6 +11,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
 import TicketSelection from './pages/ticketSelection'
+import InputField from './components/InputField/InputField';
+import Buttons from './components/Buttons/Buttons';
+import { ChangeEvent } from 'react';
+import Login from './pages/login/Login';
 
 
 
@@ -31,10 +35,17 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path='' element={<DemoPage />} />
-              <Route path='/dashboard' element={<DashboardPage />} />
+              {/* <Route path='/dashboard' element={<DashboardPage />} /> */}
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/ticket-selection' element={<TicketSelection />} />
+              <Route path='/InputField' element={<InputField name={''} type={'number'} value={''} onChange={function (event: ChangeEvent<HTMLInputElement>): void {
+                throw new Error('Function not implemented.');
+              } } />} />
+              <Route path='/button' element={<Buttons content={undefined} height={''} width={''} onClick={function (): void {
+                throw new Error('Function not implemented.');
+              } } />} />
+              <Route path='/login' element={<Login />} />
             </Routes>
           </BrowserRouter>
           <Footer />
