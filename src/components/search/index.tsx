@@ -49,12 +49,13 @@ const FormInput = () => {
           type="text"
           name="text"
           placeholder="Search events"
-          label="what are you looking"
-          // style={{ width: "200px" }}
+          label="what are you looking" value={""} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+            throw new Error("Function not implemented.");
+          } }          // style={{ width: "200px" }}
          
         />
         <InputField
-          type="dropdown"
+          type="text"
           name="location"
           placeholder="Lagos, Nigeria"
           options={["Lagos, Nigeria", "Delta", "Anambra"]}
@@ -71,8 +72,9 @@ const FormInput = () => {
         <Button
           
           styleType="secondary"
-          content={<FaArrowRight style={{ color: "#fff", fontSize: "18px" }} />}
-        />
+          content={<FaArrowRight style={{ color: "#fff", fontSize: "18px" }} />} height={""} width={""} onClick={function (): void {
+            throw new Error("Function not implemented.");
+          } }        />
       </Form>
     </Main>
   );
