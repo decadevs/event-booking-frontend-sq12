@@ -10,7 +10,11 @@ import { Bookerpallette } from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
+import FormInput from './components/search';
 import TicketSelection from './pages/ticketSelection'
+import Register from './pages/register/Register';
+import Allevent from './pages/AllEvents/AllEvent'
+
 
 
 
@@ -30,11 +34,15 @@ function App() {
         <Navbar />  
           <BrowserRouter>
             <Routes>
+              {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='/search' element={< FormInput/>} />
+              <Route path='/register' element={< Register/>} />
               <Route path='' element={<DemoPage />} />
               <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/ticket-selection' element={<TicketSelection />} />
+              <Route path='/events' element={<Allevent/>} />
             </Routes>
           </BrowserRouter>
           <Footer />

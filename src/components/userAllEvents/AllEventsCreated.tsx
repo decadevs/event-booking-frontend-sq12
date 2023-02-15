@@ -7,10 +7,11 @@ import Modal from "react-modal";
 import React from "react";
 import TicketsSummary from "./TicketsSummary";
 import { AllEvents, Event } from "./data";
+import ClosedCards from './ClosedCards';
 
 const Container = styled.div`
   width: auto;
-  margin: 0;
+  margin: 70px 0px;
   padding: 0;
   @media (max-width: 768px) {
     width: 100%;
@@ -60,6 +61,7 @@ const CardContainer = styled.div`
   background: #fff;
   border-radius: 6px;
   margin-bottom: 20px;
+ 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -73,8 +75,8 @@ const Image = styled.img`
   object-fit: cover;
   margin: 20px;
   @media (max-width: 768px) {
-    width: auto;
-    object-fit: cover;
+  width: auto;
+ object-fit: cover;
   }
 `;
 const Second = styled.div`
@@ -83,6 +85,11 @@ const Second = styled.div`
 const CardDetails = styled.div`
   margin: 20px 10px;
   font-size: 14px;
+`;
+const NoEvents = styled.div`
+  font-weight: bold;
+  font-size: 32px;
+  color: #000;
 `;
 const CardItem = styled.p`
   text-align: left;
@@ -177,14 +184,17 @@ const AllEventsCreated = () => {
           </EventHeaderRight>
         </Wrapper>
         {/* Second Light header */}
-        <EventStatistics>4 events created so far</EventStatistics>
+        <EventStatistics>{AllEvents.length} events created so far</EventStatistics>
         {/* Card Start */}
 
-        {AllEvents.map((event: Event) => (
+        {AllEvents && AllEvents.length > 0 ? AllEvents.map((event: Event) => (
           <CardContainer key={event.id}>
             {/* Card Image */}
-            <Image src={EventImg} />
+            
             {/* Card Title, Organizer, Ticket*/}
+            {checkStatus(event.DateTime.endDate, event.DateTime.endTime) === true ?
+            <>
+            <Image src={EventImg} />
             <Second>
               <CardDetails>
                 <CardItem>Event Title</CardItem>
@@ -272,8 +282,14 @@ const AllEventsCreated = () => {
                 <OpenInNewOutlined style={{ color: "#667085" }} />
               </CardDetails>
             </Fourth>
+            </>
+            :
+            <ClosedCards eventObj={event}/>
+            }
           </CardContainer>
-        ))}
+        )):
+        <NoEvents>No Events Created Yet</NoEvents>
+        }
 
         {/* Card Ends */}
       </Container>
