@@ -17,23 +17,19 @@ import AccountInfo from './pages/accountInformation';
 import Register from './pages/register/Register';
 import Allevent from './pages/AllEvents/AllEvent'
 
-
-
-
 const theme = createTheme({
   palette: {
-    ...Bookerpallette
+    ...Bookerpallette,
   },
-})
-
+});
 
 function App() {
   return (
     <>
-    {/* </BookrProvider> */}
+      {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
-        <Navbar />  
+          <Navbar />
           <BrowserRouter>
             <Routes>
               {/* <Route path='' element={<DemoPage />} /> */}
@@ -57,7 +53,7 @@ function App() {
         </ThemeProvider>
       </ContextProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

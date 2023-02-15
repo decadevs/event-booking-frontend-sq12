@@ -1,0 +1,309 @@
+.event-main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.eventimg {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+.event-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 40rem;
+    top: 0;
+    margin-left: 5rem;
+}
+  
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.event-main-h{
+    color: white;
+    font-family: 'Manrope';
+    margin-bottom: 2rem;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+
+}
+
+.event-main-p{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px; 
+    color: #FFFFFF;
+    text-align: justify;
+}
+
+.buy-btn-ticket-div{
+    justify-content: center;
+    align-items: center;
+  margin-top: 3rem;
+}
+
+.date-time{
+    margin-left: -18rem;
+    margin-top: 4rem;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #252D42;
+}
+
+.buy-btn-ticket{
+    margin-bottom: 2rem;
+}
+
+.event-card-date{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #252D42;
+    margin-left: -6rem;
+    margin-top: 1rem;
+
+}
+  
+.add-calender{
+    color:#FF5722 ;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: -18rem;
+    margin-top: 1rem;
+
+}
+  
+.description-event-div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 7rem;
+    gap: 10rem;
+    text-align: justify;
+    margin-left: 15rem;
+}
+
+.description-div{
+    text-align: justify;
+}
+
+.description-subhead{
+    margin-bottom: 5rem;
+}
+
+.social-div{
+    margin-top: 5rem;
+  }
+
+.social-icon-text{
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    color: #252D42;
+    margin-bottom: 3rem;
+}
+.social-icon{
+    background: #FF5722;
+    border-radius: 70%;
+    color: white;
+    padding: 7px 7px;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.social-icon-div{
+display: flex;
+}
+
+.date-event-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.date-time-subhead{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    color: #252D42;
+    margin-top: 5rem;
+    margin-bottom: 4rem ;
+}
+
+.date-time-subhead-h5{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 37px;
+    color: #252D42;
+}
+
+.how-contact-organizer{
+        text-align: justify;
+        margin-left: 15rem;
+        margin-top: 8rem;
+}
+
+.how-contact-organizer-h2 {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 44px;
+        color: #252D42;
+        margin-bottom: 4rem;
+}
+
+.how-contact-organizer-h3{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        color: #252D42;
+        margin-bottom: 7rem;
+}
+
+.contact-address{
+        color: #FF5722;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;    
+}
+.contact-address:hover{
+    cursor: pointer;
+}
+
+.event-cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-left: 5rem;
+        gap: 1rem;
+        text-align: justify;
+        margin-bottom: 12rem;
+}
+
+.event-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: -8rem;
+       
+}
+
+.event-card-text{
+        margin-left: -15rem;
+        margin-right: 2rem;
+}
+
+.event-card-p{
+        color: #FF5722;
+ }
+
+.event-card-p-div{
+        margin-top: 1rem;
+}
+
+ .event-card-h5{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #252D42;
+ }
+
+
+ @media screen and (max-width:667px){
+    .event-cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-left: -1.2rem;
+    }
+
+    .description-event-div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 1rem;
+     }
+
+    .description-div{
+        display: block;
+    }
+
+.event-content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.event-main-h-div{
+  margin-top: 12rem;
+    margin-left: -4rem;
+}
+.event-main-h{
+    font-size: 4.3rem;
+    text-align: justify;
+}
+
+.event-main-p{
+    text-align: justify;
+    font-size: 14px;
+    display: block
+}
+
+.all-cards{
+    margin-top: -25rem;
+    margin-left: -5rem;
+}
+
+.how-contact-organizer{
+    text-align: justify;
+    margin-left: 1rem;
+}
+
+.how-contact-organizer-h2{
+    font-size: 20px;
+}
+
+.how-contact-organizer-h3{
+    font-size: 20px;
+}
+.map{
+    width: 350px;
+    height: 350px;
+}
+
+
+ }
