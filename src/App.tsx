@@ -29,7 +29,7 @@ function App() {
     {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
-        {/* <Navbar />   */}
+        <Navbar />  
           <BrowserRouter>
             <Routes>
               {/* <Route path='' element={<DemoPage />} /> */}

@@ -1,0 +1,56 @@
+.btn-primary {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 5rem;
+    border-radius: 3px;
+    margin-bottom: 4rem;
+   
+}
+
+#forminput {
+    margin-bottom: 20px;
+    
+    border-radius: 5px;
+  
+    width: 200px;
+    height: 2px;
+    font-size: medium;
+    
+    
+}
+
+
+.formcontainer {
+    display: flex;
+    background: #E5E5E5;
+  justify-content: space-between;
+  
+   
+   
+   
+}
+
+.innerformcontainer{
+    background: #E5E5E5;
+    margin-top: 150px;
+    width: 290px;
+    margin-left: 100px;
+   
+    
+}
+.registerimage {
+   display: flex;
+   width: 750px;
+   height: 900px;
+   @media (max-width: 768px) {
+    display: none;
+}
+}
+
+.imagecontainerreg {
+    display: flex;
+        
+  
+   
+}
