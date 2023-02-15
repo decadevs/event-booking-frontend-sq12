@@ -21,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: '#10375C',
     padding: '1em',
-    position: 'absolute',
+    position: 'relative',
+    // right: 0,
+    // left: 0,
     bottom: 0,
     display: 'flex',
-    height: '26em',
+    height: '40vh',
     width: '100%',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -33,17 +35,15 @@ const useStyles = makeStyles((theme) => ({
   searchInput: {
     margin: theme.spacing(3),
     background: '#FFFFFF',
-    color: '#000000',
-    opacity: '0.44',
+    color: '#000 !important',
+    opacity: '0.64',
     borderRadius: '0.5em',
     width: '100%',
+    fontSize: '1em',
     marginLeft: '0',
     // height: '2.5em',
     display: 'flex',
     flexDirection: 'row',
-    '&::placeHolder' :{
-      
-    }
   },
   gridContainer: {
     display: 'flex',
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer1: {
     display: 'flex',
     flexDirection: 'column',
-    height: 'auto',
+    height: '100%',
     padding: '0',
   },
   icon: {
@@ -215,7 +215,7 @@ const Footer:React.FC = () => {
             <Typography variant="h6" gutterBottom className={classes.category}>
               Stay up to date
               <TextField
-                className={`${classes.searchInput} searchInput_mo`}
+                className={`${classes.searchInput} searchInput_mo `}
                 id="search-input"
                 placeholder="Your email address"
                 variant="outlined"

@@ -1,11 +1,11 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, FormEvent } from "react";
 import styles from "./Buttons.module.css";
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     styleType?: "primary" | "secondary";
     content: "string" | React.ReactNode;
     height: string;
     width: string;
-    onClick: () => void;
+    onClick: (e:any) => void;
     type?: "button" | "submit" | "reset";
 }
 const Button: React.FC<Props> = ({

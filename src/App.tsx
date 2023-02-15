@@ -11,6 +11,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
 import TicketSelection from './pages/ticketSelection'
+import PaymentInfo from './pages/paymentInformation';
+import AccountInfo from './pages/accountInformation';
 
 
 
@@ -35,6 +37,8 @@ function App() {
               {/* <Route path='/tickets' element={<Ticket />} /> */}
               {/* <Route path='/event-card' element={<EventCard />} /> */}
               {/* <Route path='/ticket-selection' element={<TicketSelection />} /> */}
+              <Route path='/payment-information' element={<PaymentInfo />} />
+              <Route path='/account-information' element={<AccountInfo />} />
             </Routes>
           </BrowserRouter>
           <Footer />
