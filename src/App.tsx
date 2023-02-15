@@ -13,6 +13,8 @@ import EventCard from './pages/event-card';
 import FormInput from './components/search';
 import TicketSelection from './pages/ticketSelection'
 import Register from './pages/register/Register';
+import Allevent from './pages/AllEvents/AllEvent'
+
 
 
 
@@ -40,6 +42,7 @@ function App() {
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/ticket-selection' element={<TicketSelection />} />
+              <Route path='/events' element={<Allevent/>} />
             </Routes>
           </BrowserRouter>
           <Footer />

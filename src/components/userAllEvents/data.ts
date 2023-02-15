@@ -8,7 +8,7 @@ export const AllEvents = [
         TicketClass: "VVIP, VIP & Regular",
         Category: "Event & Lifestyle",
         Location: "2b, Herbert Macaulay Road, Yaba, Lagos",
-        DateTime: {startDate:"20/01/2023", endDate:"22/01/2023", startTime:"4pm", endTime: "9pm"}
+        DateTime: {startDate:"20/02/2023", endDate:"22/02/2023", startTime:"4pm", endTime: "9pm"}
     },
     {
         id: '2',
@@ -18,10 +18,20 @@ export const AllEvents = [
         TicketClass: "VVIP, VIP & Regular",
         Category: "Event & Lifestyle",
         Location: "2b, Herbert Macaulay Road, Yaba, Lagos",
-        DateTime: {startDate:"20/01/2023", endDate:"22/01/2023", startTime:"4pm", endTime: "9pm"}
+        DateTime: {startDate:"20/02/2023", endDate:"22/02/2023", startTime:"4pm", endTime: "9pm"}
     },
     {
         id: '3',
+        img: "src/assets/userallevent/image2.png",
+        EventTitle: "Eko All Night Pool Party Festival",
+        Organizer: "ACMA People’s platform",
+        TicketClass: "VVIP, VIP & Regular",
+        Category: "Event & Lifestyle",
+        Location: "2b, Herbert Macaulay Road, Yaba, Lagos",
+        DateTime: {startDate:"20/01/2023", endDate:"22/01/2023", startTime:"4pm", endTime: "9pm"}
+    },
+    {
+        id: '4',
         img: "src/assets/userallevent/image2.png",
         EventTitle: "Eko All Night Pool Party Festival",
         Organizer: "ACMA People’s platform",
