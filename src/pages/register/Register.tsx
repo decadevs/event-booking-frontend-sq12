@@ -5,7 +5,6 @@ import "./Register.css";
 import InputField from "../../components/InputField/InputField";
 import { Link } from "react-router-dom";
 
-
 const Register = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -17,14 +16,15 @@ const Register = () => {
 
   const handleRegister = () => {
     // logic to register the user
-    
   };
 
   return (
     <div className="formcontainer">
       <div className="innerformcontainer">
         <h2>Create an account</h2>
-        <p style={{marginTop: "10px"}}>Lorem ipsum dolor sit amet consectetur</p>
+        <p style={{ marginTop: "10px" }}>
+          Lorem ipsum dolor sit amet consectetur
+        </p>
         <form>
           <InputField
             label="First Name"
@@ -33,7 +33,18 @@ const Register = () => {
             value={firstName}
             onChange={(event) => setFirstName(event.target.value)}
             id={"forminput"}
-            boxSx={{ mt: 6, mb: 4, width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 6,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
           />
           <InputField
             label="Last Name"
@@ -42,7 +53,18 @@ const Register = () => {
             value={lastName}
             onChange={(event) => setLastName(event.target.value)}
             id={"forminput"}
-            boxSx={{ mt: 10, mb: 4, width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 10,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
           />
           <InputField
             label="Email"
@@ -51,7 +73,18 @@ const Register = () => {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             id={"forminput"}
-            boxSx={{ mt: 10, mb: 4, width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 10,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
           />
           <InputField
             label="Date of Birth"
@@ -60,7 +93,18 @@ const Register = () => {
             value={dob}
             onChange={(event) => setDob(event.target.value)}
             id={"forminput"}
-            boxSx={{ mt: 10, mb: 4, width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 10,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
           />
           <InputField
             label="Phone Number"
@@ -69,7 +113,18 @@ const Register = () => {
             value={phone}
             onChange={(event) => setPhone(event.target.value)}
             id={"forminput"}
-            boxSx={{ mt: 10, mb: 4, width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 10,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
           />
           <InputField
             label="Password"
@@ -78,7 +133,18 @@ const Register = () => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             id={"forminput"}
-            boxSx={{ mt: 10, mb: 4, width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 10,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
           />
 
           <InputField
@@ -87,7 +153,18 @@ const Register = () => {
             value={confirmPassword}
             label={"Confirm Password"}
             onChange={(event) => setConfirmPassword(event.target.value)}
-            boxSx={{ mt: 10, mb: 4,  width: "400px", height: "10px"}}
+            boxSx={{
+              mt: 10,
+              mb: 4,
+              width: "400px",
+              height: "10px",
+              "@media (max-width: 600px)": {
+                width: "350px",
+                mb: 2,
+                mt: 2,
+                px: 1,
+              },
+            }}
             id={"forminput"}
           />
 
@@ -99,8 +176,11 @@ const Register = () => {
             className="btn-primary"
           />
 
-          <p style={{marginBottom: "20px"}}>
-            Already Register? <Link to={"/login"}>Login</Link>
+          <p style={{ marginBottom: "100px" }}>
+            Already Registered?{" "}
+            <Link to={"/login"} style={{ color: "#FF5722" }}>
+              Login
+            </Link>
           </p>
         </form>
       </div>

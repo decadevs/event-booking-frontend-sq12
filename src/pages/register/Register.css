@@ -5,6 +5,7 @@
     margin-top: 5rem;
     border-radius: 3px;
     margin-bottom: 4rem;
+    border: none;
    
 }
 
@@ -23,16 +24,13 @@
 
 .formcontainer {
     display: flex;
-    background: #E5E5E5;
-  justify-content: space-between;
-  
    
-   
+  justify-content: space-between; 
    
 }
 
 .innerformcontainer{
-    background: #E5E5E5;
+   
     margin-top: 150px;
     width: 290px;
     margin-left: 100px;
@@ -43,14 +41,20 @@
    display: flex;
    width: 750px;
    height: 900px;
-   @media (max-width: 768px) {
-    display: none;
-}
+   
 }
 
 .imagecontainerreg {
     display: flex;
-        
+}
+
+@media (max-width: 768px) {
+   .registerimage {
+       display: none;
+   }
+   .innerformcontainer {
+       margin-left: 0px;
+       margin-top: 50px;
+   }
   
-   
 }
