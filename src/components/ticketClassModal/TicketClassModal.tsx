@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
 import {TicketClass} from './data';
-import {useState} from 'react';
+import {ChangeEvent, useState} from 'react';
+import InputField from "../InputField/InputField";
+import Button from "../Buttons/Buttons";
 
 const TSummaryContainer = styled.div`
 background: #fff;
