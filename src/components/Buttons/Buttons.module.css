@@ -6,9 +6,21 @@
     border-radius: 3px ;
      } 
 .secondary {
+<<<<<<< HEAD
     background-color: #D9D1CE;
     color: white; 
+=======
+    background-color: rgba(29, 34, 34, 0.088);
+    color: #252D42; 
+>>>>>>> 7abbd28c3b1f01d3405923aeacd18fd0c74698a3
     padding: 10px 20px;
     border-radius: 5px; 
     border: none; 
     }
+.warning {
+        background-color: #FFF;
+        color: #252D42; 
+        padding: 10px 20px;
+        border-radius: 5px; 
+        border: none; 
+        }
