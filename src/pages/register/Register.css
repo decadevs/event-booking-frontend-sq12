@@ -16,7 +16,7 @@
   
     width: 200px;
     height: 2px;
-    font-size: medium;
+    font-size: 15px;
     
     
 }
@@ -55,6 +55,9 @@
    .innerformcontainer {
        margin-left: 0px;
        margin-top: 50px;
+   }
+   .btn-primary{
+    width: 10%;
    }
   
 }

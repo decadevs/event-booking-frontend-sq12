@@ -159,7 +159,8 @@ const Register = () => {
               width: "400px",
               height: "10px",
               "@media (max-width: 600px)": {
-                width: "350px",
+                width: "300px",
+                height: "10px",
                 mb: 2,
                 mt: 2,
                 px: 1,
