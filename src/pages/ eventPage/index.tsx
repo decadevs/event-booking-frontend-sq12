@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { eventStyles, FormField, FormInput, FormLabel, FormSpan } from "./eventStyle";
+import {
+  eventStyles,
+  FormField,
+  FormInput,
+  FormLabel,
+  FormSpan,
+} from "./eventStyle";
 import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Buttons/Buttons";
 import "./index.css";
@@ -31,26 +37,64 @@ export const EventPage = () => {
     {
       label: (
         <>
-          <h5>VVIP Ticket</h5>
-          <p>100 available</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div style={{ marginRight: "200px" }}>
+              <h5>VVIP Ticket</h5>
+              <p>100 available</p>
+            </div>
+            <button style={{ marginLeft: "150px", fontSize: "20px" }}>
+              &#8358; 200,000
+            </button>
+          </div>
         </>
       ),
       value: "vvip",
     },
+
     {
       label: (
         <>
-          <h5>VIP Ticket</h5>
-          <p>85 available</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div style={{ marginRight: "200px" }}>
+              <h5>VIP Ticket</h5>
+              <p>85 available</p>
+            </div>
+            <button style={{ marginLeft: "150px", fontSize: "20px" }}>
+              &#8358; 50,000
+            </button>
+          </div>
         </>
       ),
       value: "vip",
     },
+
     {
       label: (
         <>
-          <h5>Regular Ticket</h5>
-          <p>150 available</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div style={{ marginRight: "200px" }}>
+              <h5>Regular Ticket</h5>
+              <p>150 available</p>
+            </div>
+            <button style={{ marginLeft: "150px", fontSize: "20px" }}>
+              &#8358; 5,000
+            </button>
+          </div>
         </>
       ),
       value: "regular",
@@ -67,42 +111,24 @@ export const EventPage = () => {
     { label: "Government & Politics", value: "Government" },
   ];
 
-//UPLOAD FILES
+  //UPLOAD FILES
   const [file, setFile] = useState<File | null>(null);
-    const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
-      event.preventDefault();
-      const file = event.dataTransfer.files[0];
-      setFile(file);
-    };
+  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    setFile(file);
+  };
 
-    const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const file = event.target.files && event.target.files[0];
-      setFile(file || null);
-    };
+  const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files && event.target.files[0];
+    setFile(file || null);
+  };
 
-    const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-      event.preventDefault();
-    };
-  
-  // const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
-  //   event.preventDefault();
-  //   const file = event.dataTransfer.files[0];
-  //   console.log("file", file);
-  //   setBanner(file);
-  // };
+  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+  };
 
-  // const handleFileUpload = (event: any) => {
-  //   setSelectedFile(event.target.files[0]);
-  //   const fileName = event.target.value.split("\\").pop();
-  //   setFileDisplay(fileName);
-  // };
-
-  // const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-  //   event.preventDefault();
-  // };
-
-  React.useEffect(() => {
-  },[])
+  React.useEffect(() => {}, []);
 
   return (
     <div className={eventClasses.eventContainer}>
@@ -147,7 +173,11 @@ export const EventPage = () => {
               value={ticketClass}
               options={ticketOptions}
               onChange={(e) => setTicketClass(e.target.value)}
-              formSx={{ width: "100%" }}
+              formSx={{
+                width: "90%",
+                height: "10%",
+              }}
+              // boxSx={{ width:"100%"}}
             />
 
             <Dropdown
@@ -197,7 +227,6 @@ export const EventPage = () => {
                 style={{
                   width: "100%",
                   height: "15em",
-                  // border: "2px dashed black",
                 }}
               >
                 {file ? (
@@ -205,7 +234,6 @@ export const EventPage = () => {
                 ) : (
                   <>
                     <p style={{ fontSize: "small", opacity: "0.7" }}>
-                      {" "}
                       or click to drag image
                     </p>
                     <p>
@@ -222,7 +250,7 @@ export const EventPage = () => {
 
         <div className={eventClasses.location}>
           <h2>
-            Location <br />{" "}
+            Locatio
             <span className={eventClasses.locationSpan}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </span>
