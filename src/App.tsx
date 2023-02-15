@@ -41,7 +41,7 @@ function App() {
               <Route path='/ticket-selection' element={<TicketSelection />} />
               <Route path='/InputField' element={<InputField name={''} type={'number'} value={''} onChange={function (event: ChangeEvent<HTMLInputElement>): void {
                 throw new Error('Function not implemented.');
-              } } />} />
+              } } label={''} id={''} />} />
               <Route path='/button' element={<Buttons content={undefined} height={''} width={''} onClick={function (): void {
                 throw new Error('Function not implemented.');
               } } />} />

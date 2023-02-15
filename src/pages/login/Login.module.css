@@ -96,3 +96,9 @@
 .createLogin{
     color: #ff5722;
 }
+
+@media(max-width: 768px) {
+    .loginFormImg {
+        display: none;
+    }
+}
