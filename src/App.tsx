@@ -10,11 +10,14 @@ import { Bookerpallette } from './utils/theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
+import FormInput from './components/search';
 import TicketSelection from './pages/ticketSelection'
 import InputField from './components/InputField/InputField';
 import Buttons from './components/Buttons/Buttons';
 import { ChangeEvent } from 'react';
 import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Allevent from './pages/AllEvents/AllEvent'
 
 
 
@@ -34,6 +37,9 @@ function App() {
         <Navbar />  
           <BrowserRouter>
             <Routes>
+              {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='/search' element={< FormInput/>} />
+              <Route path='/register' element={< Register/>} />
               <Route path='' element={<DemoPage />} />
               {/* <Route path='/dashboard' element={<DashboardPage />} /> */}
               <Route path='/tickets' element={<Ticket />} />
@@ -46,6 +52,7 @@ function App() {
                 throw new Error('Function not implemented.');
               } } />} />
               <Route path='/login' element={<Login />} />
+              <Route path='/events' element={<Allevent/>} />
             </Routes>
           </BrowserRouter>
           <Footer />

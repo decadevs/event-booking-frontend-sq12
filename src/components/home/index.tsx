@@ -12,7 +12,6 @@ const Main = styled.div`
 export const Demo: React.FC = () => {
 return (
     <Main>
-        {/* <h2> Hello BookR</h2> */}
         <EventSearch />
     </Main>
 )
