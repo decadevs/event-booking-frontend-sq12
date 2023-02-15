@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, styled } from "@material-ui/core";
 
 export const eventStyles = makeStyles((theme) => ({
   eventContainer: {
@@ -60,6 +60,7 @@ export const eventStyles = makeStyles((theme) => ({
   },
   location: {
     // marginTop: "90px",
+
     marginBottom: "90px",
     "& h2": {
       fontFamily: "Manrope",
@@ -71,9 +72,17 @@ export const eventStyles = makeStyles((theme) => ({
     },
   },
 
-  Date_Time: {},
+  Date_Time: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+  },
 
-  Date_TimeInputField: {},
+  Date_TimeInputField: {
+    display: "grid",
+    positionItems: "center",
+    width: "100%",
+  },
 
   EventDateForm: {
     marginTop: "2em",
@@ -118,6 +127,8 @@ export const eventStyles = makeStyles((theme) => ({
   },
   eventUpload: {
     display: "flex",
+    position: "relative",
+    flexDirection: "column",
     justifyContent: "center",
     width: "100%",
     height: "30.3em",
@@ -169,7 +180,7 @@ export const eventStyles = makeStyles((theme) => ({
       },
     },
     eventUpload: {
-      height: "13em",
+      // height: "13em",
     },
     eventsBtn: {
       display: "grid",
@@ -197,6 +208,9 @@ export const eventStyles = makeStyles((theme) => ({
       fontSize: "0.8em",
       lineHeight: "1.6em",
     },
+    EventDateForm:{
+      width: "100%",
+    }
   },
 
   calendarIconDiv: {
@@ -226,4 +240,51 @@ export const eventStyles = makeStyles((theme) => ({
     height: "24px",
     width: "24px",
   },
+
+  uploadfileInput: {
+    display: "none",
+    // opacity: 0,
+  },
 }));
+
+export const FormField = styled('form')({
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'relative',
+  flexDirection: 'column'
+})
+
+export const FormLabel = styled('label')({
+  display: 'grid',
+  placeItems: 'center',
+  position: 'relative',
+  overflow: 'hidden',
+  cursor: 'pointer',
+})
+export const FormInput = styled('input')({
+  cursor: 'pointer',
+  opacity: 0,
+  display: 'none',
+  position: 'absolute',
+  top: '0',
+  right: '0',
+  margin: '0',
+  padding: '0',
+  fontSize: '20px',
+  filter: 'alpha(opacity=0)'
+
+})
+export const FormSpan = styled('span')({
+display: 'inlineBlock',
+  width: '100%',
+  padding: '0 10px',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  backgroundColor: '#fff',
+  border: '1px solid #ddd',
+  borderRadius: '4px',
+  boxSizing: 'border-box',
+})

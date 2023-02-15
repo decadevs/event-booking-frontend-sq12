@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { eventStyles } from "./eventStyle";
+import { eventStyles, FormField, FormInput, FormLabel, FormSpan } from "./eventStyle";
 import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Buttons/Buttons";
 import "./index.css";
@@ -10,6 +10,10 @@ import { HiOutlineUpload } from "react-icons/hi";
 
 export const EventPage = () => {
   const eventClasses = eventStyles();
+
+  //UPLOAD FILES
+  const [banner, setBanner] = useState<Record<string, any>>({});
+  const [displayName, setFileDisplay] = useState("");
 
   //state
   const [eventTitle, setEventTitle] = useState("");
@@ -63,23 +67,42 @@ export const EventPage = () => {
     { label: "Government & Politics", value: "Government" },
   ];
 
-  //UPLOAD FILES
+//UPLOAD FILES
   const [file, setFile] = useState<File | null>(null);
+    const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+      event.preventDefault();
+      const file = event.dataTransfer.files[0];
+      setFile(file);
+    };
 
-  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    setFile(file);
-  };
+    const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files && event.target.files[0];
+      setFile(file || null);
+    };
 
-  const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
-    setFile(file);
-  };
+    const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+      event.preventDefault();
+    };
+  
+  // const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+  //   event.preventDefault();
+  //   const file = event.dataTransfer.files[0];
+  //   console.log("file", file);
+  //   setBanner(file);
+  // };
 
-  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  };
+  // const handleFileUpload = (event: any) => {
+  //   setSelectedFile(event.target.files[0]);
+  //   const fileName = event.target.value.split("\\").pop();
+  //   setFileDisplay(fileName);
+  // };
+
+  // const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+  //   event.preventDefault();
+  // };
+
+  React.useEffect(() => {
+  },[])
 
   return (
     <div className={eventClasses.eventContainer}>
@@ -142,42 +165,58 @@ export const EventPage = () => {
             <p
               style={{
                 borderBottom: "1px solid rgba(37, 45, 66, 0.29)",
-                height: "2em",
+                height: "3.5em",
               }}
             >
               Upload Event Banner
             </p>
 
-            <div>
-              <button>
+            <FormField>
+              <label htmlFor="file-input">
                 <HiOutlineUpload
-                  style={{ color: "000000", width: "90%", height: "6em" }}
-                />
-                <input
-                  type="file"
-                  onChange={handleUpload}
-                  placeholder="click to upload"
-                />
-                <div
-                  onDrop={handleDrop}
-                  onDragOver={handleDragOver}
+                  className="h-5 w-5"
                   style={{
-                    width: "300px",
-                    height: "300px",
+                    color: "000000",
+                    width: "90%",
+                    height: "6em",
+                    cursor: "pointer",
                   }}
-                >
-                  {file ? (
-                    <p>{file.name}</p>
-                  ) : (
-                    <>
-                      <p>Upload from file </p>
-                      <p>or click here to drag image</p>
-                      <p>PNG or JPEG only</p>
-                    </>
-                  )}
-                </div>
-              </button>
-            </div>
+                />
+              </label>
+              <input
+                id="file-input"
+                type="file"
+                onChange={handleUpload}
+                style={{ display: "none" }}
+              />
+
+              <h4>Upload from file</h4>
+              <div
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+                style={{
+                  width: "100%",
+                  height: "15em",
+                  // border: "2px dashed black",
+                }}
+              >
+                {file ? (
+                  <p>{file.name}</p>
+                ) : (
+                  <>
+                    <p style={{ fontSize: "small", opacity: "0.7" }}>
+                      {" "}
+                      or click to drag image
+                    </p>
+                    <p>
+                      <small style={{ fontSize: "small", opacity: "0.2" }}>
+                        PNG or JPEG
+                      </small>
+                    </p>
+                  </>
+                )}
+              </div>
+            </FormField>
           </div>
         </div>
 
