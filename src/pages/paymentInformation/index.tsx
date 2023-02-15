@@ -7,11 +7,15 @@ import Button from '../../components/Buttons/Buttons';
 
 const PaymentInfo = () => {
     const [formData, setFormData] = React.useState<Record<string,any>>({});
+    const [bank, setBank] = React.useState<string>('');
+    const [accountNumber, setAccountNumber] = React.useState<string>('');
     const paymentClasses = paymentStyles()
 
-    const handleEventChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setFormData({...formData, [name]: value})
+    const handleBankChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setBank(event.target.value)
+    }
+    const handleAccountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setAccountNumber(event.target.value)
     }
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -34,24 +38,24 @@ const PaymentInfo = () => {
                             type="text"
                             label='Bank'
                             id='bankInput'
-                            value=''
+                            value={bank}
                             name='bank'
                             placeholder='Bank Name'
-                            onChange={() => console.log('changed')}
+                            onChange={handleBankChange}
 
                         />
                         <InputField
-                            type="text"
+                            type={"text"}
                             label='Account Number'
                             id='accountInput'
-                            value=''
+                            value={accountNumber}
                             name='account'
                             placeholder='Account Number'
-                            onChange={handleEventChange}
+                            onChange={handleAccountChange}
 
                         />
                         <InputArea
-                            type="text"
+                            type={"text"}
                             value={'Michael Obasanjo'}
                             name='name'
                             placeholder=''
