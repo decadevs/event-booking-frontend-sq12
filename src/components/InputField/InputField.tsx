@@ -41,7 +41,11 @@ const InputField: React.FC<Props> = ({
                 />{" "}
             </FormControl>{" "}
         </Box>
+<<<<<<< Updated upstream
     );
 
+=======
+    )
+>>>>>>> Stashed changes
 };
 export default InputField;
