@@ -8,9 +8,9 @@ import events from '../../assets/events.png'
 import Card from "../../components/eventCard";
 import Footer from "../../components/footer"
 
+
 interface card {
     handleClick: ()=> void,
-
 }
 
 const stlyedEvents = makeStyles((theme)=>({

@@ -11,6 +11,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
 import TicketSelection from './pages/ticketSelection'
+import { Hero } from './pages/eventPage/Hero';
 
 
 
@@ -27,7 +28,7 @@ function App() {
     {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
-        <Navbar />  
+        {/* <Navbar />   */}
           <BrowserRouter>
             <Routes>
               <Route path='' element={<DemoPage />} />
@@ -35,9 +36,10 @@ function App() {
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/ticket-selection' element={<TicketSelection />} />
+              <Route path='event-page' element={<Hero/>}></Route>
             </Routes>
           </BrowserRouter>
-          <Footer />
+          {/*<Footer /> */}
         </ThemeProvider>
       </ContextProvider>
     </>
