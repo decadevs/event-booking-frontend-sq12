@@ -139,7 +139,7 @@ export const eventStyles = makeStyles((theme) => ({
       height: "20%",
       justifyContent: "center",
       alignItems: "center",
-      borderBottom: "1px solid rgba(37, 45, 66, 0.29)",
+      // borderBottom: "1px solid rgba(37, 45, 66, 0.29)",
       fontFamily: "Manrope",
       fontStyle: "normal",
       fontWeight: 500,
@@ -197,5 +197,33 @@ export const eventStyles = makeStyles((theme) => ({
       fontSize: "0.8em",
       lineHeight: "1.6em",
     },
+  },
+
+  calendarIconDiv: {
+    background: "#FFFFFF",
+    border: "1px solid rgba(37, 45, 66, 0.29)",
+    borderRadius: "4px",
+    textAlign: "center",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    justifyItems: "space-between",
+    position: "relative",
+  },
+
+  datetimeInput: {
+    background: "#FFFFFF",
+    borderStyle: "none",
+    borderRadius: "4px",
+    height: "100%",
+    width: "100%",
+    textAlign: "center",
+  },
+
+  calendarIcon: {
+    position: "absolute",
+    left: "12%",
+    height: "24px",
+    width: "24px",
   },
 }));

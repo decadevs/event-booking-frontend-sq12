@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { SlCalender } from "react-icons/sl";
-import { eventStyles } from './eventStyle'
+import { eventStyles } from "./eventStyle";
 import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Buttons/Buttons";
 import "./index.css";
 import Dropdown from "../../components/Drop_Down/DropDown";
-import { SelectChangeEvent } from "@mui/material";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { FaCalendarAlt } from 'react-icons/fa';
-import { RxUpload } from "react-icons/rx";
-import { CalendarInput } from "./eventDate"
-
+import { FaCalendarAlt } from "react-icons/fa";
+import { HiOutlineUpload } from "react-icons/hi";
 
 export const EventPage = () => {
   const eventClasses = eventStyles();
@@ -28,22 +23,63 @@ export const EventPage = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
+  const ticketOptions = [
+    {
+      label: (
+        <>
+          <h5>VVIP Ticket</h5>
+          <p>100 available</p>
+        </>
+      ),
+      value: "vvip",
+    },
+    {
+      label: (
+        <>
+          <h5>VIP Ticket</h5>
+          <p>85 available</p>
+        </>
+      ),
+      value: "vip",
+    },
+    {
+      label: (
+        <>
+          <h5>Regular Ticket</h5>
+          <p>150 available</p>
+        </>
+      ),
+      value: "regular",
+    },
+  ];
 
-    const ticketOptions = [
-      { label: "VVIP Ticket", value: "vvip" },
-      { label: "VIP Ticket", value: "vip" },
-      { label: "Regular Ticket", value: "regular" },
-    ];
-  
-    const categoryOptions = [
-      { label: "food & Drinks", value: "food" },
-      { label: "Firm,Media & Entertainment", value: "Media" },
-      { label: "Event & Lifestyle", value: "Event" },
-      { label: "Special Interest", value: "Special" },
-      { label: "Religious & Spirituality", value: "Religious" },
-      { label: "Technology", value: "Technology" },
-      { label: "Government & Politics", value: "Government" },
-    ];
+  const categoryOptions = [
+    { label: "food & Drinks", value: "food" },
+    { label: "Firm,Media & Entertainment", value: "Media" },
+    { label: "Event & Lifestyle", value: "Event" },
+    { label: "Special Interest", value: "Special" },
+    { label: "Religious & Spirituality", value: "Religious" },
+    { label: "Technology", value: "Technology" },
+    { label: "Government & Politics", value: "Government" },
+  ];
+
+  //UPLOAD FILES
+  const [file, setFile] = useState<File | null>(null);
+
+  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    setFile(file);
+  };
+
+  const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files && event.target.files[0];
+    setFile(file);
+  };
+
+  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+  };
 
   return (
     <div className={eventClasses.eventContainer}>
@@ -103,7 +139,45 @@ export const EventPage = () => {
 
         <div className={eventClasses.eventUpload}>
           <div className={eventClasses.uploadField}>
-            <p>Upload Event Banner</p>
+            <p
+              style={{
+                borderBottom: "1px solid rgba(37, 45, 66, 0.29)",
+                height: "2em",
+              }}
+            >
+              Upload Event Banner
+            </p>
+
+            <div>
+              <button>
+                <HiOutlineUpload
+                  style={{ color: "000000", width: "90%", height: "6em" }}
+                />
+                <input
+                  type="file"
+                  onChange={handleUpload}
+                  placeholder="click to upload"
+                />
+                <div
+                  onDrop={handleDrop}
+                  onDragOver={handleDragOver}
+                  style={{
+                    width: "300px",
+                    height: "300px",
+                  }}
+                >
+                  {file ? (
+                    <p>{file.name}</p>
+                  ) : (
+                    <>
+                      <p>Upload from file </p>
+                      <p>or click here to drag image</p>
+                      <p>PNG or JPEG only</p>
+                    </>
+                  )}
+                </div>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -143,72 +217,53 @@ export const EventPage = () => {
 
           <div className={eventClasses.Date_TimeInputField}>
             <form className={eventClasses.EventDateForm}>
-              {/* <InputField
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid rgba(37, 45, 66, 0.29)",
-                  borderRadius: "4px",
-                  textAlign: "center",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                name="name"
-                type={"date"}
-                label="Event Starts"
-                value={""}
-                id={""}
-                onChange={(e) => setOrganizer(e.target.value)}
-              /> */}
-              <input
-                // value={eventStarts}
-                type={"date"}
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid rgba(37, 45, 66, 0.29)",
-                  borderRadius: "4px",
-                  textAlign: "center",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                placeholder="Event Starts"
-              />
-              <input
-                // value={eventEnds}
-                type={"date"}
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid rgba(37, 45, 66, 0.29)",
-                  borderRadius: "4px",
-                  textAlign: "center",
-                }}
-                placeholder="Event Ends"
-              />
-              <input
-                // value={startTime}
-                type={"time"}
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid rgba(37, 45, 66, 0.29)",
-                  borderRadius: "4px",
-                  textAlign: "center",
-                }}
-                placeholder="Start Time"
-              />
-              <input
-                // value={endTime}
-                type={"time"}
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid rgba(37, 45, 66, 0.29)",
-                  borderRadius: "4px",
-                  textAlign: "center",
-                }}
-                placeholder="End Time"
-              />
-              {/* <CalendarInput /> */}
+              <div className={eventClasses.calendarIconDiv}>
+                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                  Event Starts
+                </p>
+                <FaCalendarAlt className={eventClasses.calendarIcon} />
+                <input
+                  // value={eventStarts}
+                  className={eventClasses.datetimeInput}
+                  type="date"
+                />
+              </div>
 
+              <div className={eventClasses.calendarIconDiv}>
+                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                  Event Ends
+                </p>
+                <FaCalendarAlt className={eventClasses.calendarIcon} />
+                <input
+                  // value={eventStarts}
+                  className={eventClasses.datetimeInput}
+                  type="date"
+                />
+              </div>
+
+              <div className={eventClasses.calendarIconDiv}>
+                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                  Start Time
+                </p>
+                <FaCalendarAlt className={eventClasses.calendarIcon} />
+                <input
+                  // value={eventStarts}
+                  className={eventClasses.datetimeInput}
+                  type="time"
+                />
+              </div>
+
+              <div className={eventClasses.calendarIconDiv}>
+                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                  End Time
+                </p>
+                <FaCalendarAlt className={eventClasses.calendarIcon} />
+                <input
+                  // value={eventStarts}
+                  className={eventClasses.datetimeInput}
+                  type="time"
+                />
+              </div>
             </form>
           </div>
         </div>
