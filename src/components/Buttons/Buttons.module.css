@@ -4,17 +4,27 @@
     padding: 10px 20px;
     border: none; 
     border-radius: 3px ;
-     } 
+} 
 .secondary {
+
+    background-color: #D9D1CE;
+    color: white; 
     background-color: rgba(29, 34, 34, 0.088);
-    color: #252D42;
+    color: #252D42; 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    border: 0.5px solid black; 
+}
+.warning {
+    background-color: #FFF;
+    color: #252D42; 
     padding: 10px 20px;
     border-radius: 5px; 
     border: none; 
-    }
-.warning{
-    background-color: #FFF;
-    color: #252D42; 
+}
+.danger {
+    background-color: #D9D1CE;
+    color: #FF5722; 
     padding: 10px 20px;
     border-radius: 5px; 
     border: none; 
