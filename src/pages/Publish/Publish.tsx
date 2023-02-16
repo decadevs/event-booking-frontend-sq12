@@ -72,10 +72,13 @@ const Publish: React.FunctionComponent<IPublishProps> = (props) => {
                         <Buttons
                             content={"Send & Publish"}
                             height={'8vh'}
-                            width={'93vw'}
+                            width={'86vw'}
                             onClick={function (): void {
                                 throw new Error('Function not implemented.');
                             }} />
+                        <p className='publish-space'>
+
+                        </p>
                     </div>
                 </div>
             </div>
