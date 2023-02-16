@@ -6,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
+import { style } from "@material-ui/system";
 interface Props {
   id?: string;
   title?: string;

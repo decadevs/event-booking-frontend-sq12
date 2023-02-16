@@ -8,7 +8,6 @@ export const eventStyles = makeStyles((theme) => ({
     backgroundColor: "#E5E5E5",
     display: "grid",
     placeItems: "center",
-    // marginBottom: "3rem",
   },
   eventMain: {
     width: "90%",
@@ -59,15 +58,12 @@ export const eventStyles = makeStyles((theme) => ({
     },
   },
   location: {
-    // marginTop: "90px",
-
     marginBottom: "90px",
     "& h2": {
       fontFamily: "Manrope",
       fontStyle: "normal",
       fontWeight: "800",
       fontSize: "2em",
-      // lineHeight: '2.7em',
       color: "#252D42",
     },
   },
@@ -140,8 +136,6 @@ export const eventStyles = makeStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     alignItems: "center",
-    // justifyContent: "center",
-    // paddingTop: '2em',
     marginTop: "0px",
     "& p": {
       marginTop: "0px",
@@ -150,7 +144,6 @@ export const eventStyles = makeStyles((theme) => ({
       height: "20%",
       justifyContent: "center",
       alignItems: "center",
-      // borderBottom: "1px solid rgba(37, 45, 66, 0.29)",
       fontFamily: "Manrope",
       fontStyle: "normal",
       fontWeight: 500,
@@ -162,15 +155,14 @@ export const eventStyles = makeStyles((theme) => ({
   },
 
   ticket_category: {
-    // display: "flex",
-    // gap: "2em",
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "2em",
     width: "100%",
   },
 
-  "@media (max-width:768px)": {
+  "@media (max-width:690px)": {
+    // 768px
     iconInfo: {
       display: "none",
     },
@@ -208,9 +200,16 @@ export const eventStyles = makeStyles((theme) => ({
       fontSize: "0.8em",
       lineHeight: "1.6em",
     },
-    EventDateForm:{
+    EventDateForm: {
       width: "100%",
-    }
+    },
+
+    ticket_category: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "16px",
+      width: "100%",
+    },
   },
 
   calendarIconDiv: {
@@ -243,48 +242,46 @@ export const eventStyles = makeStyles((theme) => ({
 
   uploadfileInput: {
     display: "none",
-    // opacity: 0,
   },
 }));
 
-export const FormField = styled('form')({
-  display: 'flex',
-  width: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  flexDirection: 'column'
-})
+export const FormField = styled("form")({
+  display: "flex",
+  width: "100%",
+  justifyContent: "center",
+  alignItems: "center",
+  position: "relative",
+  flexDirection: "column",
+});
 
-export const FormLabel = styled('label')({
-  display: 'grid',
-  placeItems: 'center',
-  position: 'relative',
-  overflow: 'hidden',
-  cursor: 'pointer',
-})
-export const FormInput = styled('input')({
-  cursor: 'pointer',
+export const FormLabel = styled("label")({
+  display: "grid",
+  placeItems: "center",
+  position: "relative",
+  overflow: "hidden",
+  cursor: "pointer",
+});
+export const FormInput = styled("input")({
+  cursor: "pointer",
   opacity: 0,
-  display: 'none',
-  position: 'absolute',
-  top: '0',
-  right: '0',
-  margin: '0',
-  padding: '0',
-  fontSize: '20px',
-  filter: 'alpha(opacity=0)'
-
-})
-export const FormSpan = styled('span')({
-display: 'inlineBlock',
-  width: '100%',
-  padding: '0 10px',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  backgroundColor: '#fff',
-  border: '1px solid #ddd',
-  borderRadius: '4px',
-  boxSizing: 'border-box',
-})
+  display: "none",
+  position: "absolute",
+  top: "0",
+  right: "0",
+  margin: "0",
+  padding: "0",
+  fontSize: "20px",
+  filter: "alpha(opacity=0)",
+});
+export const FormSpan = styled("span")({
+  display: "inlineBlock",
+  width: "100%",
+  padding: "0 10px",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
+  backgroundColor: "#fff",
+  border: "1px solid #ddd",
+  borderRadius: "4px",
+  boxSizing: "border-box",
+});

@@ -10,7 +10,8 @@ import {
 import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Buttons/Buttons";
 import "./index.css";
-import Dropdown from "../../components/Drop_Down/DropDown";
+// import Dropdown from "../../components/Drop_Down/DropDown";
+import Dropdown from "./dropdown";
 import { FaCalendarAlt } from "react-icons/fa";
 import { HiOutlineUpload } from "react-icons/hi";
 
@@ -34,6 +35,7 @@ export const EventPage = () => {
   const [endTime, setEndTime] = useState("");
 
   const ticketOptions = [
+
     {
       label: (
         <>
@@ -41,15 +43,22 @@ export const EventPage = () => {
             style={{
               display: "flex",
               flexDirection: "row",
+              height: "10px",
             }}
           >
-            <div style={{ marginRight: "200px" }}>
-              <h5>VVIP Ticket</h5>
-              <p>100 available</p>
+            <div style={{ marginRight: "250px", fontSize: "8px" }}>
+              <p style={{ position: "relative" }}>VVIP Ticket</p>
+              <p style={{ opacity: 0.4, position: "absolute", top: 30 }}>
+                100 available
+              </p>
             </div>
-            <button style={{ marginLeft: "150px", fontSize: "20px" }}>
+            <p
+              style={{
+                marginLeft: "200px",
+              }}
+            >
               &#8358; 200,000
-            </button>
+            </p>
           </div>
         </>
       ),
@@ -63,15 +72,22 @@ export const EventPage = () => {
             style={{
               display: "flex",
               flexDirection: "row",
+              height: "10px",
             }}
           >
-            <div style={{ marginRight: "200px" }}>
-              <h5>VIP Ticket</h5>
-              <p>85 available</p>
+            <div style={{ marginRight: "250px", fontSize: "8px" }}>
+              <p style={{ position: "relative" }}>VIP Ticket</p>
+              <p style={{ opacity: 0.4, position: "absolute", top: 30 }}>
+                85 available
+              </p>
             </div>
-            <button style={{ marginLeft: "150px", fontSize: "20px" }}>
+            <p
+              style={{
+                marginLeft: "215px",
+              }}
+            >
               &#8358; 50,000
-            </button>
+            </p>
           </div>
         </>
       ),
@@ -85,24 +101,38 @@ export const EventPage = () => {
             style={{
               display: "flex",
               flexDirection: "row",
+              height: "10px",
             }}
           >
-            <div style={{ marginRight: "200px" }}>
-              <h5>Regular Ticket</h5>
-              <p>150 available</p>
+            <div
+              style={{
+                marginRight: "250px",
+                fontSize: "8px",
+              }}
+            >
+              <p style={{ position: "relative" }}>
+                <b>Regular Ticket</b>
+              </p>
+              <p style={{ opacity: 0.4, position: "absolute", top: 30 }}>
+                150 available
+              </p>
             </div>
-            <button style={{ marginLeft: "150px", fontSize: "20px" }}>
+            <p
+              style={{
+                marginLeft: "210px",
+              }}
+            >
               &#8358; 5,000
-            </button>
+            </p>
           </div>
         </>
       ),
-      value: "regular",
+      value: "Regular",
     },
   ];
 
   const categoryOptions = [
-    { label: "food & Drinks", value: "food" },
+    { label: "Food & Drinks", value: "food" },
     { label: "Firm,Media & Entertainment", value: "Media" },
     { label: "Event & Lifestyle", value: "Event" },
     { label: "Special Interest", value: "Special" },
@@ -112,6 +142,7 @@ export const EventPage = () => {
   ];
 
   //UPLOAD FILES
+
   const [file, setFile] = useState<File | null>(null);
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -168,16 +199,14 @@ export const EventPage = () => {
           </div>
 
           <div className={eventClasses.ticket_category}>
+
             <Dropdown
               label={"Ticket Class"}
               value={ticketClass}
               options={ticketOptions}
               onChange={(e) => setTicketClass(e.target.value)}
               formSx={{
-                width: "90%",
-                height: "10%",
-              }}
-              // boxSx={{ width:"100%"}}
+                width: "100%" }}
             />
 
             <Dropdown
