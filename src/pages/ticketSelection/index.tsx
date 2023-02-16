@@ -68,7 +68,7 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
   };
   return (
     <div>
-      <div className={selections.header1}>
+      {/* <div className={selections.header1}>
         <div className={selections.header2}>
           <p className={selections.eventHead}>Event</p>
           <div className={`${selections.headerBtns} ${showNavbar}`}>
@@ -134,7 +134,7 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
             </MenuItem>
           </Menu>
         </div>
-      </div>
+      </div> */}
       <div className={selections.imgDiv}>
         <img
           src={ticks}
