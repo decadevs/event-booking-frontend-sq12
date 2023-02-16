@@ -7,7 +7,7 @@ export const stlyedSelection = makeStyles((theme) => ({
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#E5E5E5",
+      backgroundColor: "white",
     },
     mainContainer1: {
       display: "flex",
@@ -35,6 +35,7 @@ export const stlyedSelection = makeStyles((theme) => ({
       height: "42px",
       background: "rgba(0, 50, 47, 0.05)",
       borderRadius: "4px",
+      border: "none"
     },
     intro: {
       fontFamily: "Manrope",
@@ -105,6 +106,7 @@ export const stlyedSelection = makeStyles((theme) => ({
       height: "56px",
       left: "475px",
       top: "454px",
+      border: "none",
       background: "#FF5722",
       borderRadius: "6px",
       fontFamily: "Manrope",
@@ -177,6 +179,7 @@ export const stlyedSelection = makeStyles((theme) => ({
       background: "#FF5722",
       borderRadius: "4px",
       color: "#FFFFFF",
+      border: "none",
     },
     eventBanner: {
       width: "100%",

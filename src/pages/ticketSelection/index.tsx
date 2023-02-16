@@ -12,17 +12,8 @@ import { BsArrowLeft } from "react-icons/bs";
 import ticks from "../../assets/ticketSelection/ticks.png";
 import { width } from "@material-ui/system";
 import { RxDropdownMenu as Hamburger } from "react-icons/rx";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  MenuItem,
-  Menu,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { IconButton, MenuItem, Menu } from "@material-ui/core";
 import {stlyedSelection} from './ticketStyles'
-import { Email } from "@material-ui/icons";
 
 
 const TicketSelection: React.FC = () => {
@@ -77,7 +68,7 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
   };
   return (
     <div>
-      {/* <div className={selections.header1}>
+      <div className={selections.header1}>
         <div className={selections.header2}>
           <p className={selections.eventHead}>Event</p>
           <div className={`${selections.headerBtns} ${showNavbar}`}>
@@ -143,7 +134,7 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
             </MenuItem>
           </Menu>
         </div>
-      </div> */}
+      </div>
       <div className={selections.imgDiv}>
         <img
           src={ticks}
@@ -184,11 +175,10 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
           <div className={selections.headingContainer}>
             <h3 className={selections.intro}>Fill your details as required</h3>
             <Link style={{ textDecoration: "none" }} to={`/map`}>
-              <button className={selections.mapBtn}>view map</button>
+              <button className={selections.mapBtn}>View map</button>
             </Link>
           </div>
           <div className={selections.formContainer}>
-            {/* <div className={selections.inputs}> */}
           <InputField
            label={"FirstName"}
            id=""
@@ -199,8 +189,6 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
            onChange={handleNameChange}
            style={{width:"10em"}}
           />
-          {/* </div> */}
-          {/* <div className={selections.inputs}> */}
           <InputField 
            label={"Email"}
            id=""
@@ -210,17 +198,6 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
            placeholder={"Email"}
            onChange={handleEmailChange}
           />
-          {/* </div> */}
-            {/* <form id="first_name" className={`${selections.firstName}`}>
-              <div className="form-group">
-                <label>First name</label>
-                <input type="text" className="form-control input-lg" />
-              </div>
-              <div className="form-group">
-                <label>Email</label>
-                <input type="text" className="form-control input-lg" />
-              </div>
-            </form> */}
           </div>
           <p className={selections.tick}>Tickets</p>
           <TCard>
@@ -418,7 +395,7 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
           <div className={selections.line}></div>
           <div className={selections.continue}>
             <Link style={{ textDecoration: "none" }} to={`/checkout`}>
-              <button className={selections.continueBtn}>continue</button>
+              <button className={selections.continueBtn}>Continue</button>
             </Link>
           </div>
         </div>
