@@ -1,14 +1,15 @@
 /* #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
 
   /* --primary: #10375C;
   --secondary: #FF5722;
   --white: #FFF;
   --dark: #000;
-  --gray: #c5c600; */
+  --gray: #c5c600;
 
 .logo {
   height: 6em;

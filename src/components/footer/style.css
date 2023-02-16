@@ -11,10 +11,14 @@
 
     list-style: none;
 }
+
 .ul_categoryList{
     display: flex;
     align-items: center;
     align-items: center;
+}
+.MuiOutlinedInput-root {
+    font-size: 1em !important;
 }
 
 @media (max-width: 768px){

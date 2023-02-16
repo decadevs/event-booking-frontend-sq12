@@ -20,12 +20,6 @@ export const stlyedSelection = makeStyles((theme) => ({
       flexDirection: "row",
       justifyContent: "space-between",
     },
-    formContainer: {
-      height: "auto",
-      display: "flex",
-      flexDirection: "column",
-      marginBottom: "40px",
-    },
     mapBtn: {
       backgroundColor: "rgba(0, 50, 47, 0.05)",
       marginTop: "2em",
@@ -86,12 +80,17 @@ export const stlyedSelection = makeStyles((theme) => ({
     },
     btnSelect: {
       background: "#FFFFFF",
-      fontSize: "25px",
-      textAlign: "center",
       display: "flex",
-      alignContents: "center",
-      justifyContents: "center",
-      borderRadius: "0PX",
+      flexDirection: 'column',
+      fontSize: "25px",
+    //   textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "0px",
+      border: "0px solid #C4C4C4",
+    //   marginTop: "0.7em",
+      width: "2em",
+      cursor: "pointer",
     },
     qty: {
       fontFamily: "Manrope",
@@ -242,6 +241,25 @@ export const stlyedSelection = makeStyles((theme) => ({
         width: "20em",
         height: "3.5em",
         fontSize: "1em"
+    },
+    formContainer: {
+        height: "auto",
+        display: "grid",
+        // flexDirection: "row",
+        gridTemplateColumns: '1fr 1fr',
+        marginBottom: "40px",
+        gap: '3em',
+        // justifyContent: "space-between",
+        width: "100%",
+        '& InputField': {
+            width: '100%',
+            fontSize:'1.5em',
+            fontWeight: 'normal',
+            outline: 'none !important',
+        }
+      },
+    inputs: {
+        width: "50%",
     },
     "@media (max-width: 768px)": {
       mainContainer: {

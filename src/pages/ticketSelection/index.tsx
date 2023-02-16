@@ -22,6 +22,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import {stlyedSelection} from './ticketStyles'
+import { Email } from "@material-ui/icons";
 
 
 const TicketSelection: React.FC = () => {
@@ -31,7 +32,14 @@ const TicketSelection: React.FC = () => {
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-
+const [firstname, setFirstName] = useState("")
+const [email, setEmail] = useState("")
+const handleNameChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+  setFirstName(event.target.value)
+}
+const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+  setEmail(event.target.value)
+}
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -69,7 +77,7 @@ const TicketSelection: React.FC = () => {
   };
   return (
     <div>
-      <div className={selections.header1}>
+      {/* <div className={selections.header1}>
         <div className={selections.header2}>
           <p className={selections.eventHead}>Event</p>
           <div className={`${selections.headerBtns} ${showNavbar}`}>
@@ -101,7 +109,6 @@ const TicketSelection: React.FC = () => {
             </Link>
           </div>
         </div>
-        {/* <div><button className={selections.nav}>nav</button></div> */}
         <div className={selections.navbarIcon} onClick={handleShowNavbar}>
           <IconButton
             edge="start"
@@ -109,7 +116,6 @@ const TicketSelection: React.FC = () => {
             aria-label="menu"
             onClick={handleMenu}
           >
-            {/* <MenuIcon /> */}
           <Hamburger style={{ fontSize: "40px" }} />
           </IconButton>
           <Menu className={selections.menuAppBar}
@@ -137,7 +143,7 @@ const TicketSelection: React.FC = () => {
             </MenuItem>
           </Menu>
         </div>
-      </div>
+      </div> */}
       <div className={selections.imgDiv}>
         <img
           src={ticks}
@@ -182,7 +188,30 @@ const TicketSelection: React.FC = () => {
             </Link>
           </div>
           <div className={selections.formContainer}>
-            <form id="first_name" className={`${selections.firstName}`}>
+            {/* <div className={selections.inputs}> */}
+          <InputField
+           label={"FirstName"}
+           id=""
+           type={"text"}
+           value={firstname}
+           name={"FirstName"}
+           placeholder={"FirstName"}
+           onChange={handleNameChange}
+           style={{width:"10em"}}
+          />
+          {/* </div> */}
+          {/* <div className={selections.inputs}> */}
+          <InputField 
+           label={"Email"}
+           id=""
+           type={"text"}
+           value={email}
+           name={"Email"}
+           placeholder={"Email"}
+           onChange={handleEmailChange}
+          />
+          {/* </div> */}
+            {/* <form id="first_name" className={`${selections.firstName}`}>
               <div className="form-group">
                 <label>First name</label>
                 <input type="text" className="form-control input-lg" />
@@ -191,7 +220,7 @@ const TicketSelection: React.FC = () => {
                 <label>Email</label>
                 <input type="text" className="form-control input-lg" />
               </div>
-            </form>
+            </form> */}
           </div>
           <p className={selections.tick}>Tickets</p>
           <TCard>
