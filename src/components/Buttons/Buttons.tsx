@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, FormEvent } from "react";
 import styles from "./Buttons.module.css";
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   styleType?: "primary" | "secondary" | "warning";
