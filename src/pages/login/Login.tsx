@@ -1,4 +1,4 @@
-import React from "react";
+import React, {HTMLInputTypeAttribute, useState} from "react";
 import InputField from "../../components/InputField/InputField";
 import LoginCSS from "./Login.module.css";
 import LoginImg from "../../assets/login-img.png";
@@ -8,46 +8,52 @@ import vector from "../../assets/Vector.png";
 import Vector from "../../assets/Vector 2.png";
 
 function Login() {
+
+  const [inputEmail, setInputEmail] = useState({ email: '' });
+  const { email } = inputEmail;
+  const [userLogin, setUserLogin] = useState({ password: '' });
+  const { password } = userLogin;
+  const handleForm = (e: any) => {
+    const { name, value } = e.target;
+    setInputEmail((data) => ({ ...data, [name]: value }));
+    console.log(inputEmail)
+  };
+  function handleChange(e: any) {
+    const { name, value } = e.target;
+    setUserLogin((prev) => ({ ...prev, [name]: value }));
+    console.log(userLogin)
+  }
+  
+  
   return (
     <>
-      <div className={LoginCSS.loginContainer}>
+      <div className={LoginCSS.loginContainer} style={{marginTop:"70px"}}>
         <div className={LoginCSS.loginFormPage}>
-          <div className={LoginCSS.loginFormDetails}>
-            <div className={LoginCSS.loginFormHeading}>
+          <div className={LoginCSS.loginFormDetails }>
+            <div className={LoginCSS.loginFormHeading} >
               <h3>Login to your account</h3>
               <p>Lorem ipsum dolor sit amet consectetur</p>
             </div>
 
             <div className={LoginCSS.loginForm}>
-              <InputField
-                className={LoginCSS.loginFormInput}
-                name={"email"}
-               
+    
+              <InputField                
+                name={'email'}
                 type={"email"}
-                value={""}
-                onChange={function (
-                  event: React.ChangeEvent<HTMLInputElement>
-                ): void {
-                  throw new Error("Function not implemented.");
-                }}
-                label={"email"}
+                label={"Email"}
+                value={email}
                 id={""}
-                boxSx={{mb: 2}}
-              />
-              <InputField
+                onChange={handleForm}
+              />              
+              <InputField                
                 className={LoginCSS.loginFormInput}
                 name={"password"}
-               
                 type={"password"}
-                value={""}
-                onChange={function (
-                  event: React.ChangeEvent<HTMLInputElement>
-                ): void {
-                  throw new Error("Function not implemented.");
-                }}
-                label={"password"}
+                value={password}
+                onChange={handleChange}
+                label={"Password"}
                 id={""}
-                boxSx={{}}
+                boxSx={{mt:2}}
               />
               <div className={LoginCSS.forgotPass}>
                 <Link to={""}>Forgot Password</Link>
@@ -66,25 +72,24 @@ function Login() {
               <div className={LoginCSS.loginOr}>
                 <p> Or </p>
               </div>
-              <div className={LoginCSS.loginIcon}>
+              <div className={LoginCSS.loginIcon} >
                 <button
                   className={LoginCSS.googleBtn}
-                  style={{ width: "300px" }}
+                  style={{ width: "300px" , borderRadius:"5px"}}
                 >
                   <img src={Vector} alt="google icon" height="20" />
                   <p className={LoginCSS.socialP}> Google </p>
                 </button>
 
-                <button className={LoginCSS.facebookBtn}>
+                <button className={LoginCSS.facebookBtn}
+                style={{ width: "300px" , borderRadius:"5px"}}>
                   <img src={vector} alt="facebook icon" height="20" />
                   <p className={LoginCSS.socialP}> Facebook </p>
                 </button>
               </div>
               <div className={LoginCSS.notReg}>
                 Not yet registered?
-                {/* <div className={LoginCSS.createLogin}>
-                <Link to={""}>Create account</Link>
-              </div> */}
+          
                 <Link className={LoginCSS.createLogin} to={""}>
                   {" "}
                   Create account
