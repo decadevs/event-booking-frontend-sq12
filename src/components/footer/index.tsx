@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: 'flex',
     justifyContent: 'center',
-    height: '20em',
+    // height: '20em',
     width: '100%',
     backgroundColor: '#10375C',
     alignItems: 'center',

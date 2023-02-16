@@ -50,7 +50,7 @@ button:hover {
 
 
 
-div.ReactModal__Overlay.ReactModal__Overlay--after-open{
+/* div.ReactModal__Overlay.ReactModal__Overlay--after-open{
   position: fixed;
   top: 80px !important;
 }
@@ -65,7 +65,7 @@ div.ReactModal__Content.ReactModal__Content--after-open{
     width: 300px;
     height: fit-content;
     margin: 0px auto;
-}  
+}   */
 
 
 /* @media (prefers-color-scheme: light) {
