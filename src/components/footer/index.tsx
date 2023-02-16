@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: 'flex',
     justifyContent: 'center',
-    height: '20em',
+    // height: '20em',
     width: '100%',
     backgroundColor: '#10375C',
     alignItems: 'center',
@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(1),
     }
   },
-  '@media (min-width: 600px)': {
+  '@media (min-width: 768px)': {
     categoryList: {
       display: 'block',
       position: 'static',
