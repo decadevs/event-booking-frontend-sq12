@@ -1,0 +1,106 @@
+.loginContainer{
+    display: flex;
+    margin: 5% auto;
+}
+.loginFormHeading{
+    margin-bottom: 30px;
+}
+.loginFormHeading h3{
+    font-weight: bolder;
+}
+
+.loginFormPage{
+    flex: 1;
+    text-align: left;
+    padding: 0;
+}
+.loginFormImg{
+    flex: 1;
+}
+.loginFormImg img{
+    width: 500px;
+
+}
+.loginFormDetails{
+    width: 300px;
+    margin: 0 auto;
+}
+.loginFormInput{
+    width: 300px !important;
+    margin: 5px 0;
+}
+.forgotPass{
+    margin: 10px 0px 30px 0px;
+}
+.loginOr{
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+.loginIcon{
+    /* margin: 5px 0; */
+    width: 300px !important;
+    border-radius: 5px;
+}
+
+.googleBtn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(243, 26, 26);
+    cursor: pointer;
+}
+.googleBtn{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* gap: 180px; */
+    height: 3em;
+    width: 300px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-color: #ff5722;
+    transition: all .2s ease-in-out
+       
+}
+.socialP{
+    font-size: 15px;
+    width: 80%;
+    margin: 0px auto;
+    color: #ff5722;
+}
+.facebookBtn{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* gap: 180px; */
+    height: 3em;
+    width: 300px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    background-color: rgb(255,255,255);
+    border-color: #ff5722;
+    transition: all .2s ease-in-out
+       
+}
+/* .facebookBtn p{
+    font-size: 15px;
+    text-align: left;
+} */
+
+.facebookBtn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(243, 26, 26);
+    cursor: pointer;
+}
+.notReg{
+    text-align: center;
+    padding-top: 30px;
+}
+.createLogin{
+    color: #ff5722;
+}
+
+@media(max-width: 768px) {
+    .loginFormImg {
+        display: none;
+    }
+}
