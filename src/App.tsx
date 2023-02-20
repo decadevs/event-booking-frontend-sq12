@@ -11,6 +11,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Ticket from './components/Drop_Down/Ticket';
 import EventCard from './pages/event-card';
 import TicketSelection from './pages/ticketSelection'
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import ResetPassword from './pages/Reset Password/resetPassword';
 
 
 
@@ -35,6 +37,8 @@ function App() {
               <Route path='/tickets' element={<Ticket />} />
               <Route path='/event-card' element={<EventCard />} />
               <Route path='/ticket-selection' element={<TicketSelection />} />
+              <Route path='/forgot-password' element={<ForgotPassword />} />
+              <Route path='/reset-password' element={<ResetPassword />} />
             </Routes>
           </BrowserRouter>
           <Footer />
