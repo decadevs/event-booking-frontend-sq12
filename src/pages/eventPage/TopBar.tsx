@@ -3,19 +3,20 @@ import React from 'react'
 import MinimalSelect from './CategoryButton'
 import Event from './EventButton'
 
+
 const TopBar = () => {
+
   return (
-    <Box>
-      <Box  mt='20px'>
-        <Stack direction='row' spacing={2} justifyContent='space-between'>
-        <Typography variant='h2'> Upcoming Events </Typography>
-        <Stack direction='row' spacing={3} marginTop='2'>
+    
+      <Box sx={{marginTop:'300px'}}>
+        <Box display='flex' sx={{xs:{display:'flex'}}}>
+        <Typography variant='h2' marginRight='48.5%'> Upcoming Events </Typography>
+        <Box display='flex' marginTop='2' sx={{gap:'30px'}}>
            <MinimalSelect/>
-           <Event/>
-        </Stack>
-        </Stack>
+           <Event />
+        </Box>
+        </Box>
       </Box>
-    </Box>
   )
 }
 
