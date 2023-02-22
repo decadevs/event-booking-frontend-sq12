@@ -21,7 +21,8 @@ import { ChangeEvent } from 'react';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Allevent from './pages/AllEvents/AllEvent'
-import EventDetails from './pages/eventDetails/eventDetails';
+import EventDetails from "./pages/eventDetails/eventDetails"
+import { Hero } from './pages/eventPage/Hero';
 
 const theme = createTheme({
   palette: {
@@ -64,6 +65,7 @@ function App() {
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/events" element={<Allevent />} />
               <Route path="/event-details" element={<EventDetails />} />;
+              <Route path='event-page' element={<Hero/>}/>
             </Routes>
           </BrowserRouter>
           <Footer />
