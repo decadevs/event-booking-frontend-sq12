@@ -314,7 +314,7 @@ export const EventPage = () => {
           <div className={eventClasses.Date_TimeInputField}>
             <form className={eventClasses.EventDateForm}>
               <div className={eventClasses.calendarIconDiv}>
-                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                <p style={{ position: "absolute", width: "100%", top: "8px" }}>
                   Event Starts
                 </p>
                 <FaCalendarAlt className={eventClasses.calendarIcon} />
@@ -326,7 +326,7 @@ export const EventPage = () => {
               </div>
 
               <div className={eventClasses.calendarIconDiv}>
-                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                <p style={{ position: "absolute", width: "100%", top: "8px" }}>
                   Event Ends
                 </p>
                 <FaCalendarAlt className={eventClasses.calendarIcon} />
@@ -338,7 +338,7 @@ export const EventPage = () => {
               </div>
 
               <div className={eventClasses.calendarIconDiv}>
-                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                <p style={{ position: "absolute", width: "100%", top: "8px" }}>
                   Start Time
                 </p>
                 <FaCalendarAlt className={eventClasses.calendarIcon} />
@@ -350,7 +350,7 @@ export const EventPage = () => {
               </div>
 
               <div className={eventClasses.calendarIconDiv}>
-                <p style={{ position: "absolute", width: "100%", top: "0px" }}>
+                <p style={{ position: "absolute", width: "100%", top: "8px" }}>
                   End Time
                 </p>
                 <FaCalendarAlt className={eventClasses.calendarIcon} />
