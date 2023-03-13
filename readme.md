@@ -57,3 +57,17 @@ The Repo follow a pattern in the structure
     ├── context
     ├── theme
 ```
+
+### Context
+i. create a .env file
+ii. Add all that is in sample.env to it
+
+
+1. When using location.setItem or location.getItem, use 'auth' as the variable name
+e.g    localStorage.setItem("auth", JSON.stringify(data));
+        setAuth({ ...auth, token: data.token, user: data.user });
+2. Write this before your return 
+const [auth, setAuth] =useAuth();
+import useAuth from context/auth
+
+3. When consuming API, you don't need to prefix it with http://localhost:3000 again
