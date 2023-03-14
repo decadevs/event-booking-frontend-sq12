@@ -1,14 +1,8 @@
 import axios from "axios";
 import { useState, createContext, useContext, useEffect } from "react";
-import {baseURL} from "../utils/config"
-
-interface AuthContextInterface {
-  status: string;
-  token?: string;
-}
+import { baseURL } from "../utils/config";
 
 const AuthContext = createContext<any | null>(null);
-let process: NodeJS.Process;
 
 const AuthProvider = ({ children }: any) => {
   const [auth, setAuth] = useState({

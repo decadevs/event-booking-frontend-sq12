@@ -21,6 +21,7 @@ import Register from "./pages/register/Register";
 import Allevent from "./pages/AllEvents/AllEvent";
 import EventDetails from "./pages/eventDetails/eventDetails";
 import { Hero } from "./pages/eventPage/Hero";
+import PrivateRoute from "./context/PrivateRoutes";
 
 const theme = createTheme({
   palette: {
@@ -37,28 +38,25 @@ function App() {
           <Navbar />
           <BrowserRouter>
             <Routes>
-              {/* <Route path='' element={<DemoPage />} /> */}
+              {/* Protected routes start */}
+              <Route path="/dashboard" element={<PrivateRoute />}>
+                <Route path="event-page" element={<EventPage />} />
+                <Route path="" element={<DashboardPage />} />
+                <Route path="payment-information" element={<PaymentInfo />} />
+                <Route path="account-information" element={<AccountInfo />} />
+                <Route path="event-card" element={<EventCard />} />
+                <Route path="event-details" element={<EventDetails />} />;
+              </Route>
+              {/* end */}
+
               <Route path="/publish" element={<Publish />} />
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/event-card" element={<EventCard />} />
-              <Route path="/event-page" element={<EventPage />} />
               <Route path="" element={<DemoPage />} />
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/payment-information" element={<PaymentInfo />} />
-              <Route path="/account-information" element={<AccountInfo />} />
               <Route path="/search" element={<FormInput />} />
               <Route path="/register" element={<Register />} />
-              <Route path="" element={<DemoPage />} />
               <Route path="/ticket-selection" element={<TicketSelection />} />
               <Route path="/login" element={<Login />} />
               <Route path="/events" element={<Allevent />} />
-              <Route path="" element={<DemoPage />} />
-              <Route path="/search" element={<FormInput />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/events" element={<Allevent />} />
-              <Route path="/event-details" element={<EventDetails />} />;
-              <Route path="event-page" element={<Hero />} />
+              <Route path="event-pages" element={<Hero />} />
             </Routes>
           </BrowserRouter>
           <Footer />

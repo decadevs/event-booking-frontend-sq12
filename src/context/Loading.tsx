@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import LoadingGif from "../assets/ProtectedRoutesImages/Loading.gif";
 import { loadingStyles } from "./load";
 
-export function Loading({ path = "login" }) {
+export function Loading() {
   const loadingClasses = loadingStyles();
   const [count, setCount] = useState(3);
 
@@ -15,7 +15,7 @@ export function Loading({ path = "login" }) {
       setCount((currentCount) => --currentCount);
     }, 1000);
     count === 0 &&
-      navigate(`${path}`, {
+      navigate(`/login`, {
         state: location.pathname,
       });
 
