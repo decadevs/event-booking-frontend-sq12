@@ -15,8 +15,7 @@ const resetPassword = () => {
           </div>
           <form className={ResetPassword.RPForm}>
             <div className={ResetPassword.RPinputContainer}>
-              {/* <fieldset>
-          <legend >Email</legend> */}
+
                 <input
               className={ResetPassword.RPformInput}
               placeholder="New Password"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css'
 import Footer from './components/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -14,24 +15,49 @@ import TicketSelection from './pages/ticketSelection'
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import ResetPassword from './pages/Reset Password/resetPassword';
 
+=======
+import "./App.css";
+import Footer from "./components/footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { DemoPage } from "./pages/demo";
+import { DashboardPage } from "./pages/dashboard/DashboardPage";
+import Navbar from "./components/navbar/Navbar";
+import { ContextProvider } from "./utils/context";
+import { Bookerpallette } from "./utils/theme";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Ticket from "./components/Drop_Down/Ticket";
+import EventCard from "./pages/event-card";
+import Publish from "./pages/Publish/Publish";
+import FormInput from "./components/search";
+import TicketSelection from "./pages/ticketSelection";
+import { EventPage } from "./pages/ eventPage";
+>>>>>>> cdc433107f14952b759bf79dac825d1c3d376a7a
 
+import PaymentInfo from "./pages/paymentInformation";
+import AccountInfo from "./pages/accountInformation";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import Allevent from "./pages/AllEvents/AllEvent";
+import EventDetails from "./pages/eventDetails/eventDetails";
+import { Hero } from "./pages/eventPage/Hero";
+import PrivateRoute from "./context/PrivateRoutes";
 
 const theme = createTheme({
   palette: {
-    ...Bookerpallette
+    ...Bookerpallette,
   },
-})
-
+});
 
 function App() {
   return (
     <>
-    {/* </BookrProvider> */}
+      {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
-        <Navbar />  
+          <Navbar />
           <BrowserRouter>
             <Routes>
+<<<<<<< HEAD
             {/* <Route path='/nav' element={<Navbar />} /> */}
               <Route path='' element={<DemoPage />} />
               <Route path='/dashboard' element={<DashboardPage />} />
@@ -40,13 +66,34 @@ function App() {
               <Route path='/ticket-selection' element={<TicketSelection />} />
               <Route path='/forgot-password' element={<ForgotPassword />} />
               <Route path='/reset-password' element={<ResetPassword />} />
+=======
+              {/* Protected routes start */}
+              <Route path="/dashboard" element={<PrivateRoute />}>
+                <Route path="event-page" element={<EventPage />} />
+                <Route path="" element={<DashboardPage />} />
+                <Route path="payment-information" element={<PaymentInfo />} />
+                <Route path="account-information" element={<AccountInfo />} />
+                <Route path="event-card" element={<EventCard />} />
+                <Route path="event-details" element={<EventDetails />} />;
+              </Route>
+              {/* end */}
+
+              <Route path="/publish" element={<Publish />} />
+              <Route path="" element={<DemoPage />} />
+              <Route path="/search" element={<FormInput />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/ticket-selection" element={<TicketSelection />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/events" element={<Allevent />} />
+              <Route path="event-pages" element={<Hero />} />
+>>>>>>> cdc433107f14952b759bf79dac825d1c3d376a7a
             </Routes>
           </BrowserRouter>
           <Footer />
         </ThemeProvider>
       </ContextProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

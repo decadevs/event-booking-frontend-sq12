@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import stled from 'styled-components';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -14,15 +15,18 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '../../assets/searchIcon.png';
 // import SearchIcon from '@material-ui/icons/Search';
+import styled from 'styled-components';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: '#10375C',
     padding: '1em',
     position: 'relative',
+    // right: 0,
+    // left: 0,
     bottom: 0,
     display: 'flex',
-    height: '26em',
+    height: '40vh',
     width: '100%',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -31,22 +35,20 @@ const useStyles = makeStyles((theme) => ({
   searchInput: {
     margin: theme.spacing(3),
     background: '#FFFFFF',
-    color: '#000000',
-    opacity: '0.44',
+    color: '#000 !important',
+    opacity: '0.64',
     borderRadius: '0.5em',
     width: '100%',
+    fontSize: '1em',
     marginLeft: '0',
-    height: '2.5em',
+    // height: '2.5em',
     display: 'flex',
     flexDirection: 'row',
-    '&::placeHolder' :{
-      
-    }
   },
   gridContainer: {
     display: 'flex',
     justifyContent: 'center',
-    height: '20em',
+    // height: '20em',
     width: '100%',
     backgroundColor: '#10375C',
     alignItems: 'center',
@@ -57,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer1: {
     display: 'flex',
     flexDirection: 'column',
-    height: 'auto',
+    height: '100%',
     padding: '0',
   },
   icon: {
@@ -103,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(1),
     }
   },
-  '@media (min-width: 600px)': {
+  '@media (min-width: 768px)': {
     categoryList: {
       display: 'block',
       position: 'static',
@@ -114,6 +116,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer:React.FC = () => {
   const classes = useStyles();
+  const Paragraph = styled.p`
+    color: #FFF;
+    font-size: 1em;
+  `
 
   return (
     <footer className={`${classes.footer} footer_mo`}>
@@ -209,7 +215,7 @@ const Footer:React.FC = () => {
             <Typography variant="h6" gutterBottom className={classes.category}>
               Stay up to date
               <TextField
-                className={`${classes.searchInput} searchInput_mo`}
+                className={`${classes.searchInput} searchInput_mo `}
                 id="search-input"
                 placeholder="Your email address"
                 variant="outlined"
@@ -217,7 +223,7 @@ const Footer:React.FC = () => {
                 InputProps={{
                     endAdornment: (
                     <InputAdornment position="end">
-                        <IconButton aria-label="search">
+                        <IconButton style={{width: '100%'}}  aria-label="search">
                         {/* <SearchIcon /> */}
                         <img src={SearchIcon} style={{color: '#FF5722'}} alt="search" />
                         </IconButton>
@@ -228,12 +234,14 @@ const Footer:React.FC = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Typography variant="subtitle1" align="center"  style={{ color: "#FFF !important"}} component="p">
-          {'Copyright © '
-          + new Date().getFullYear() + ' '}
-          <Link className={classes.link} href="#">
+        <Typography variant="subtitle1" align="center"  color='textPrimary' component="p">
+          <Paragraph>
+            {'Copyright © '
+            + new Date().getFullYear() + ' '}
+            <Link className={classes.link} href="#">
             All rights reserved.
           </Link>
+          </Paragraph>
         </Typography>
         <Typography style={{color:"white"}} component={'p'}>
             {/* hello */}
