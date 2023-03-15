@@ -32,6 +32,7 @@ function App() {
         <Navbar />  
           <BrowserRouter>
             <Routes>
+            {/* <Route path='/nav' element={<Navbar />} /> */}
               <Route path='' element={<DemoPage />} />
               <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/tickets' element={<Ticket />} />

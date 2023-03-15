@@ -12,14 +12,13 @@ const Button: React.FC<Props> = ({
     content,
     styleType = "primary",
     height,
-    width,
     onClick,
     type,
     ...props
 }) => {
     const className = styles[styleType];
     return (
-        <button className={className} onClick={onClick} style={{ height, width }} type={type} {...props}>
+        <button className={className} onClick={onClick} style={{ height }} type={type} {...props}>
             {" "}
             {content}
         </button>

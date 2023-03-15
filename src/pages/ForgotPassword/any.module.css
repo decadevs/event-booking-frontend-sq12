@@ -1,105 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.forgotPasswordContainer{
+  display: flex;
+  margin-top: 80px;
+  padding: 0;
+ 
 }
-.MainWrapper{
+
+.formWrapper{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  align-items: center;
+  
+}
+
+.formContainer{
+  display: flex; 
+  width: 45rem;
+  height: 40rem;
+  flex-direction: column;
+ 
+}
+
+
+.fPTitle{
+  margin-bottom: 5rem;
+}
+.fPTitle h1{
+  font-size: 3rem;
+  font-weight: 800;
+  color:black;
+}
+.fPinputContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:12rem;
+}
+
+.fPformInput{
+  padding: 10px;
+
+}
+.fPBtn{
+  padding:10px 0; 
+  margin:0;
+  border-radius: 0;
+  background-color: #FF5722;
+  color: white; 
+}
+
+.fPImageContainer{
+  width: 50%;
+}
+.passwordimage{
   width:100%;
 }
-.forgotPasswordContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: #E5E5E5; */    max-width: 100%;
-    /* background-color: blue; */  }
-  .formPage{
-    justify-content: center;
-    width: 100%;
-    /* background-color: blueviolet; */    /* align-items: center; */  }
-  .forgotPasswordImage {
-    width: 50%;
-  }
-  .forgotPasswordForm {
-    display: flex;
+@media screen and (max-width:1028px){
+ .forgotPasswordContainer{
     flex-direction: column;
-    width: 50%;
-    text-align: left;
+    justify-content: center;
   }
-  .formPage {
-    margin-bottom: 20px;
-    width: 7;
-  }
-  .title{
-    margin-left: 70px;
-    font-size: 30px;
-    font-weight: 900;
-  }
-  .paragraph{
-    margin-left: 70px;
-    margin-bottom: 30px;
-  }
-  label { 
-    display: block;
-    margin-bottom: -11px;
-    margin-left: 100px;
-    width: 10px;
-  }
-  input {
-    display: block;
-    width: 70%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-left: 70px;
-    margin-bottom: 30px;
-  }
-  Button{
-    margin-left: 70px;
-  }
-  @media screen and (max-width:1024px) {
-    .forgotPasswordContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        margin-top: 6em;
-        overflow-y: hidden;
-    }
-    .forgotPasswordForm{
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
-    }
-    .title{
-      margin-left: 195px;
-      font-size: 30px;
-      font-weight: 900;
-      } 
-      Button{
-    margin-left: 0;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  input {
-    display: block;
-   display: flex;
-    margin-left: 0;
-  /* align-items: center;  justify-content: center; */  width: 50%;
-  }
-  .forgotPasswordImage{
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .formPage{
+
+.fPImageContainer{
+  width: 100%;
+}
+.formWrapper{
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  
+}
+.formContainer{
+  width:50%;
+  padding: 0 10px ;
+}
+
+}
+@media screen and (max-width:600px){
+  .formContainer{
     width:100%;
-    display:flex; 
-    flex-direction:column; 
-    align-items: center  }
-  .paragraph{
-    margin-left: 195px;
-    margin-bottom: 30px;
+    padding: 0 10px ;
   }
 }
