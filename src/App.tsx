@@ -22,6 +22,8 @@ import Allevent from "./pages/AllEvents/AllEvent";
 import EventDetails from "./pages/eventDetails/eventDetails";
 import { Hero } from "./pages/eventPage/Hero";
 import PrivateRoute from "./context/PrivateRoutes";
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import ResetPassword from './pages/Reset Password/resetPassword';
 
 const theme = createTheme({
   palette: {
@@ -57,6 +59,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/events" element={<Allevent />} />
               <Route path="event-pages" element={<Hero />} />
+              <Route path="forgot-password" element={<ForgotPassword />} />
+              <Route path="reset-password" element={<ResetPassword />} />
             </Routes>
           </BrowserRouter>
           <Footer />

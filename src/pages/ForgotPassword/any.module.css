@@ -1,0 +1,84 @@
+.forgotPasswordContainer{
+  display: flex;
+  margin-top: 80px;
+  padding: 0;
+ 
+}
+
+.formWrapper{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  align-items: center;
+  
+}
+
+.formContainer{
+  display: flex; 
+  width: 45rem;
+  height: 40rem;
+  flex-direction: column;
+ 
+}
+
+
+.fPTitle{
+  margin-bottom: 5rem;
+}
+.fPTitle h1{
+  font-size: 3rem;
+  font-weight: 800;
+  color:black;
+}
+.fPinputContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:12rem;
+}
+
+.fPformInput{
+  padding: 10px;
+
+}
+.fPBtn{
+  padding:10px 0; 
+  margin:0;
+  border-radius: 0;
+  background-color: #FF5722;
+  color: white; 
+}
+
+.fPImageContainer{
+  width: 50%;
+}
+.passwordimage{
+  width:100%;
+}
+@media screen and (max-width:1028px){
+ .forgotPasswordContainer{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.fPImageContainer{
+  width: 100%;
+}
+.formWrapper{
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  
+}
+.formContainer{
+  width:50%;
+  padding: 0 10px ;
+}
+
+}
+@media screen and (max-width:600px){
+  .formContainer{
+    width:100%;
+    padding: 0 10px ;
+  }
+}
