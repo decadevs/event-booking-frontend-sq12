@@ -5,17 +5,12 @@
   text-align: center;
 } */
 
-   --primary: #10375C;
+   /* --primary: #10375C;
   --secondary: #FF5722;
   --white: #FFF;
   --dark: #000;
-<<<<<<< HEAD
-  --gray: #c5c600; 
-
-=======
-  --gray: #c5c600; */
+  --gray: #c5c600;  */
 /* 
->>>>>>> cdc433107f14952b759bf79dac825d1c3d376a7a
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -49,4 +44,4 @@
 
 .read-the-docs {
   color: #888;
-} */
+} 
