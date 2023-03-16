@@ -12,8 +12,6 @@ const  PaymentTypePage: React.FC = () => {
     const payments = styledPayments();
     const options = ['Select', 'Paystack', 'Flutterwave', 'Bank Transfer', 'Online Payment'];
     const [selectedOption, setSelectedOption] = useState(options[0]);
-
-    // const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const pay = () => {
         window.location.href = '/payment-type'
       }

@@ -1,6 +1,4 @@
 import { makeStyles, Theme } from "@material-ui/core/styles";
-// import { useMediaQuery } from "@material-ui/core";
-// const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
 import Button from "../../../components/Buttons/Buttons";
 export const styledPayments = makeStyles((Theme) => ({
 mainContainer:{

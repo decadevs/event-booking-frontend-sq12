@@ -11,7 +11,6 @@ const ticketSelectionCardStyles = makeStyles((theme)=>({
         height: "auto",
         alignItems: "center",
         padding: "2.5em 3em 0.5em 3em",
-        // background: "rgba(0, 50, 47, 0.03)",
     },
     '@media (max-width: 768px)': {
         display: "flex",

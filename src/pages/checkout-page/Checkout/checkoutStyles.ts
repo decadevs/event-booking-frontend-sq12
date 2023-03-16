@@ -49,7 +49,6 @@ export const styledCheckout = makeStyles((theme) => ({
         display: "none",
       },
    menuAppBar:{
-      //   height: "20em",
         marginTop: "5.6em",
         MarginRight: 0,
         position: 'absolute'

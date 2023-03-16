@@ -24,12 +24,6 @@ const  CheckoutPage: React.FC = () => {
 const checkout = styledCheckout();
 const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 const open = Boolean(anchorEl);
-// const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
-//   setAnchorEl(event.currentTarget);
-// };
-// const handleClose = () => {
-//   setAnchorEl(null);
-// };
 const [name, setName] = useState("")
 const [email, setEmail] = useState("")
 const handleNameChange = (event:React.ChangeEvent<HTMLInputElement>) => {
@@ -56,74 +50,6 @@ const handleModalClose = () => {
 }
 return (
   <div>
-{/* <div className={checkout.header1}>
-        <div className={checkout.header2}>
-          <p className={checkout.eventHead}>Event</p>
-          <div className={`${checkout.headerBtns} ${showNavbar}`}>
-            <Link
-              style={{
-                textDecoration: "none",
-                color: "#252D42",
-                paddingTop: "1em",
-              }}
-              to={"/login"}
-            >
-              <p
-                style={{
-                  fontFamily: "Manrope",
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                  color: "#252D42",
-                }}
-              >
-                Login
-              </p>
-            </Link>
-            <Link to={"/create-event"}>
-              <button className={checkout.eventCreateBtn}>
-                Create Event
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className={checkout.navbarIcon} onClick={handleShowNavbar}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={handleMenu}
-          >
-          <Hamburger style={{ fontSize: "40px" }} />
-          </IconButton>
-          <Menu className={checkout.menuAppBar}
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            open={open}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose} className={checkout.menuAppIcons}>
-              <Link to="/">Login</Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose} className={checkout.menuAppIcons}>
-              <Link to="/login">Create Event</Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose} className={checkout.menuAppIcons}>
-              <Link to="/create-account">Go Back</Link>
-            </MenuItem>
-          </Menu>
-        </div>
-      </div> */}
-
       <div className={checkout.imgDiv}>
         <img
           src={ticks}
