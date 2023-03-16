@@ -95,7 +95,7 @@ const handleEmailChange = (event:React.ChangeEvent<HTMLInputElement>) => {
             </Link>
             <Link to={"/create-event"}>
               <button className={selections.eventCreateBtn}>
-                Create event
+                Create Event
               </button>
             </Link>
           </div>
