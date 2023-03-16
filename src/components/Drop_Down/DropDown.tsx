@@ -10,7 +10,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 
 interface Props {
     id?: string;
-    title?: string
+    title?: string;
     label: string;
     value: string;
     options: Array<{ value: any; label: string }>;

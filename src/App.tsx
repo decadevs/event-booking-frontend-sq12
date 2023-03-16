@@ -17,11 +17,13 @@ import { EventPage } from "./pages/ eventPage";
 import PaymentInfo from "./pages/paymentInformation";
 import AccountInfo from "./pages/accountInformation";
 import Login from "./pages/login/Login";
+import CheckoutPage from "./pages/checkout-page/Checkout"
 import Register from "./pages/register/Register";
 import Allevent from "./pages/AllEvents/AllEvent";
 import EventDetails from "./pages/eventDetails/eventDetails";
 import { Hero } from "./pages/eventPage/Hero";
 import PrivateRoute from "./context/PrivateRoutes";
+import PaymentTypePage from "./pages/checkout-page/Modal";
 
 const theme = createTheme({
   palette: {
@@ -45,10 +47,11 @@ function App() {
                 <Route path="payment-information" element={<PaymentInfo />} />
                 <Route path="account-information" element={<AccountInfo />} />
                 <Route path="event-card" element={<EventCard />} />
-                <Route path="event-details" element={<EventDetails />} />;
+                <Route path="event-details" element={<EventDetails />} />
               </Route>
               {/* end */}
 
+              <Route path="/checkout-page" element={<CheckoutPage />} />
               <Route path="/publish" element={<Publish />} />
               <Route path="" element={<DemoPage />} />
               <Route path="/search" element={<FormInput />} />
