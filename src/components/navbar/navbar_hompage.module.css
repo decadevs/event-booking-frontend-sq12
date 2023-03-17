@@ -1,0 +1,228 @@
+.topbar {
+    position: relative;
+  width: 100%;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+  right: 0;
+  background: #FFFFFF;
+  }
+  .topbarWrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .topLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .topRight {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .topbarIconContainer {
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #555;
+  }
+  .topIconBadge {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .topAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .createEvent {
+    margin: 10px 150px;
+    display: inline-block
+  }
+  .search {
+    margin: 0 10px;
+    width: 200px;
+    border: 1px solid rgb(68, 227, 227);
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+  }
+  .search:hover {
+    border: 2px solid rgb(68, 227, 227);
+  }
+  ::placeholder {
+    text-align: left;
+    font-weight: bold;
+  }
+  .Createbtn {
+      position: absolute;
+      width: 146px;
+      height: 54px;
+      left: 1198px;
+      top: 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff5722;
+    margin-left:20px;
+  }
+  .Createbtn:hover {
+    cursor: pointer;
+  }
+  .userprof {
+   margin-left:58rem;
+  }
+  .uselect {
+    width: 5rem;
+    border: none;
+    color:#333;
+    top: 15px;
+    margin-left:-1.5rem;
+  }
+  .username {
+    margin-left:0.5rem;
+  }
+  .profileIcon{
+    margin:0 20px;
+      color:red;
+      
+  }
+  .rightDetails{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:-6rem;
+    align-items: center;
+    
+  }
+  .burger{
+      display:none;
+      /* cursor: pointer; */
+  }
+
+  .login{
+    font-size:16px;
+  }
+
+  .login:hover{
+    cursor: pointer
+  }
+  @media screen and (max-width:667px){
+    .topbar{
+      position:fixed;
+      width:100%;
+      z-index: 5;
+    }  
+    .logo{
+    margin-left: -1rem;
+  
+    }
+    .burgerIcon{
+     color:black;
+    }
+    .burger{
+      display:absolute;
+      position: fixed;
+      font-size:2.5rem; 
+      padding-top:1.2rem;
+      margin-right:2rem;
+      color:black;
+      z-index:20;
+      
+      
+  }
+  .burger:hover{
+    cursor:pointer;
+  }
+  .rightDetails{
+    display:none;
+  }
+  
+  
+  }
+  @media screen and (max-width:896px){
+      .topbar{
+        position:fixed;
+        width:100%;
+        z-index: 5;
+      }  
+      .logo{
+      margin-left: -1rem;
+    
+      }
+      .Createbtn{
+        position:absolute;
+        left:18rem;
+        width:5rem
+      }
+      .burger{
+        display:inline-block;
+        font-size:2.5rem; 
+        padding-top:1.2rem;
+        margin-right:2rem;
+    }
+    .rightDetails{
+      display:none;
+    }
+   
+      
+    }
+    @media screen and (max-width:1280px){
+      .burger{
+        display:inline-block;
+        font-size:2.5rem; 
+        padding-top:1.2rem;
+        margin-right:9rem;
+    }
+    .rightDetails{
+      display:none;
+    }
+    .topbar{
+      width:100%;
+      z-index: 5;
+    }
+    }
+    @media screen and (max-width:1024px){
+      .burger{
+        display:inline-block;
+        font-size:2.5rem; 
+        padding-top:1.2rem;
+        margin-right:2rem;
+    }
+    .rightDetails{
+      display:none;
+    }
+    .topbar{
+      width:100%;
+      z-index: 5;
+    }
+    
+    }
+  

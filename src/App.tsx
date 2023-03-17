@@ -3,7 +3,7 @@ import Footer from "./components/footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DemoPage } from "./pages/demo";
 import { DashboardPage } from "./pages/dashboard/DashboardPage";
-import Navbar from "./components/navbar/Navbar";
+import Navbar_homepage from "./components/navbar/navbarHomepage/navbar_homepage.module";
 import { ContextProvider } from "./utils/context";
 import { Bookerpallette } from "./utils/theme";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -35,7 +35,7 @@ function App() {
       {/* </BookrProvider> */}
       <ContextProvider>
         <ThemeProvider theme={theme}>
-          <Navbar />
+          <Navbar_homepage />
           <BrowserRouter>
             <Routes>
               {/* Protected routes start */}
@@ -50,13 +50,13 @@ function App() {
               {/* end */}
 
               <Route path="/publish" element={<Publish />} />
-              <Route path="" element={<DemoPage />} />
+              <Route path="demopage" element={<DemoPage />} />
               <Route path="/search" element={<FormInput />} />
               <Route path="/register" element={<Register />} />
               <Route path="/ticket-selection" element={<TicketSelection />} />
               <Route path="/login" element={<Login />} />
               <Route path="/events" element={<Allevent />} />
-              <Route path="event-pages" element={<Hero />} />
+              <Route path="" element={<Hero />} />
             </Routes>
           </BrowserRouter>
           <Footer />
