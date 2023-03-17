@@ -3,7 +3,12 @@ import Button from "../../components/Buttons/Buttons";
 import image from "../../assets/imagewoman.png";
 import "./Register.css";
 import InputField from "../../components/InputField/InputField";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContextProvider } from "../../utils/context";
+
+interface RegisterProps {
+  registerConfig: (registerData: Record<string, any>) => void
+}
 
 const Register = () => {
   const [firstName, setFirstName] = useState("");
@@ -13,10 +18,27 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [formData, setFormData] = useState<{}>({})
 
-  const handleRegister = () => {
+  // using states from the Context module
+
+  const { registerConfig } = useContextProvider() as unknown as RegisterProps;
+
+  const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     // logic to register the user
+    e.preventDefault()
+    setTimeout(() => {
+      registerConfig(formData)
+    },2000)
   };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    // setFormData({...formData, [name]:value })
+  }
+
+  React.useEffect(() => {
+    setFormData({...formData, firstName:firstName, lastName: lastName, email:email, dob: dob, phone:phone, password:password, confirmPassword: confirmPassword })
+  }, [email, password]);
 
   return (
     <div className="formcontainer">

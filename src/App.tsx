@@ -23,6 +23,7 @@ import Register from './pages/register/Register';
 import Allevent from './pages/AllEvents/AllEvent'
 import EventDetails from "./pages/eventDetails/eventDetails"
 import { Hero } from './pages/eventPage/Hero';
+import { ToastContainer } from 'react-toastify';
 
 const theme = createTheme({
   palette: {
@@ -35,6 +36,7 @@ function App() {
     <>
       {/* </BookrProvider> */}
       <ContextProvider>
+        <ToastContainer />
         <ThemeProvider theme={theme}>
           <Navbar />
           <BrowserRouter>

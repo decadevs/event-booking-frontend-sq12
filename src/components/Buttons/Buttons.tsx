@@ -5,7 +5,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     content: "string" | React.ReactNode;
     height: string;
     width: string;
-    onClick: () => void;
+    onClick: (e:any) => void;
     type?: "button" | "submit" | "reset";
     icon?: ReactElement;
 }
