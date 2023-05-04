@@ -13,7 +13,8 @@ import Publish from "./pages/Publish/Publish";
 import FormInput from "./components/search";
 import TicketSelection from "./pages/ticketSelection";
 import { EventPage } from "./pages/ eventPage";
-
+import { ChangeEvent } from 'react';
+import { ToastContainer } from 'react-toastify';
 import PaymentInfo from "./pages/paymentInformation";
 import AccountInfo from "./pages/accountInformation";
 import Login from "./pages/login/Login";
@@ -36,6 +37,7 @@ function App() {
     <>
       {/* </BookrProvider> */}
       <ContextProvider>
+        <ToastContainer />
         <ThemeProvider theme={theme}>
           <Navbar_homepage />
           <BrowserRouter>
