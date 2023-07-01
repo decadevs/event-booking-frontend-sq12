@@ -45,17 +45,60 @@ function App() {
             <Routes>
               {/* <Route path='' element={<DemoPage />} /> */}
               <Route path='/publish' element={<Publish />} />
-              <Route path='/event-card' element={<EventCard />} />
-              <Route path='/event-page' element={<EventPage />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+
+              <Route path="/event-card" element={<EventCard />} />
+              <Route path="/event-page" element={<EventPage />} />
+              {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='/dashboard' element={<DashboardPage />} />
+
               <Route path='/payment-information' element={<PaymentInfo />} />
               <Route path='/account-information' element={<AccountInfo />} />
+              <Route path='/search' element={< FormInput />} />
+              <Route path='/register' element={< Register />} />
+              {/* <Route path='' element={<DemoPage />} /> */}
+
               <Route path='/ticket-selection' element={<TicketSelection />} />
               <Route path='/login' element={<Login />} />
-              <Route path='/search' element={<FormInput />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/dashboard' element={<DashboardPage />} />
               <Route path='/events' element={<Allevent />} />
               <Route path='/event-details' element={<EventDetails />} />;
+            </Routes>
+          </BrowserRouter>
+          <Footer />
+        </ThemeProvider>
+      </ContextProvider>
+
+      <ContextProvider>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <BrowserRouter>
+            <Routes>
+              {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='/publish' element={<Publish />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+
+              <Route path="/event-card" element={<EventCard />} />
+              <Route path="/event-page" element={<EventPage />} />
+              {/* <Route path='' element={<DemoPage />} /> */}
+              <Route path='/dashboard' element={<DashboardPage />} />
+
+              <Route path='/payment-information' element={<PaymentInfo />} />
+              <Route path='/account-information' element={<AccountInfo />} />
+              <Route path='/search' element={< FormInput />} />
+              <Route path='/register' element={< Register />} />
+              {/* <Route path='' element={<DemoPage />} /> */}
+
+              <Route path='/ticket-selection' element={<TicketSelection />} />
+
+
+              <Route path='/login' element={<Login />} />
+              <Route path='/events' element={<Allevent />} />
+              {/* <Route path="" element={<DemoPage />} /> */}
+              <Route path="/search" element={<FormInput />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/events" element={<Allevent />} />
+              <Route path="/event-details" element={<EventDetails />} />;
             </Routes>
           </BrowserRouter>
           <Footer />
